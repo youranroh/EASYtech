@@ -1,0 +1,116 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/User.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.user-item a:hover,
+.user-item a:active {
+  background: #ffd900;
+}
+.user-item { display: flex;}
+
+.user-content {
+  padding: 0;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+  border-radius: 25%;
+}
+
+
+.user-info h2 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: normal;
+  color: #52329c;
+  display: inline;
+}
+.user-info h3 {
+    margin: 0.2em 0;
+}
+
+.user-item:hover h2,
+.user-item:active h2,
+.user-item:hover h3,
+.user-item:active h3 {
+  color: #292929;
+}
+
+.user-item__info h3 {
+  margin: 0;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/Card.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+}
+
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/Button.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.button {
+  font: inherit;
+  border: 1px solid #4f005f;
+  background: #4f005f;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: #791188;
+  border-color: #741188;
+}
+
+.button:focus {
+  outline: none;
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/AddUser.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.input {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input input {
+  font: inherit;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.input input:focus {
+  outline: none;
+  border-color: #4f005f;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/Hdr.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.hdr {
+    text-align: center;
+    background-color:  rgb(76, 28, 86);
+    padding: 30px 0 20px 0 ;
+}
+.hdr h1 {
+    margin: 0 auto;
+    color: white;
+}
