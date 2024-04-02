@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import './CuisineCard.css';
 import { MaterialIcons } from '@expo/vector-icons';
