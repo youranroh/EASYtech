@@ -1,60 +1,76 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: #000000;
+  
+}
 
+.card {
+  width: 350px; 
+  height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: center;
+  background-color: #547ce2;
+  
+}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+.card h1{
+  color:#ffffff;
+
+}
+
+.form {
+  color:#ffffff;
+  padding: 20px;
   
-  .form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
+}
+
+.form h1 {
+  margin-top: 0;
+  text-align: center;
+  color:#ffffff;
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
   
-  .form h1 {
-    margin-top: 0;
-    text-align: center;
-  }
-  
-  .form input[type="email"],
-  .form input[type="password"] {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  
-  .form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .form p {
-    text-align: center;
-  }
-  
-  .form p button {
-    background: none;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-  }
-  
-  .form p button:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #547ce2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #547ce2;
+}
+
+.form p {
+  text-align: center;
+}
+
+.form p button {
+  background: none;
+  border: none;
+  color: #547ce2;
+  cursor: pointer;
+}
+
+.form p button:hover {
+  text-decoration: underline;
+}
