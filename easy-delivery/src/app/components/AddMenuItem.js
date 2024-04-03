@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./AddMenuItem.css";
+import './AddMenuItem.css';
 
 function AddMenuItemForm() {
   const [name, setName] = useState('');
@@ -9,7 +9,7 @@ function AddMenuItemForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     console.log({
       name,
       price,
@@ -23,9 +23,15 @@ function AddMenuItemForm() {
     setDescription('');
   };
 
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    console.log('Selected image:', file);
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
       <div>
+        <h2>Add Item</h2>
         <label htmlFor="name">Name of Food:</label>
         <input
           type="text"
@@ -65,6 +71,16 @@ function AddMenuItemForm() {
           id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="image">Image:</label>
+        <input
+          type="file"
+          id="image"
+          accept="image/*"
+          onChange={(e) => handleImageUpload(e)}
           required
         />
       </div>
