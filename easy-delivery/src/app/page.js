@@ -4,6 +4,7 @@ import LogIn from './components/LogIn';
 import styles from './page.module.css';
 import Navigation from './components/Navigation';
 import RestaurantCard from './components/RestaurantCard';
+import AddMenuItemForm from './components/AddMenuItem';
 
 function Home() {
   return (
@@ -13,7 +14,9 @@ function Home() {
         restaurantName="Your Restaurant Name"
         rating={4.5}
         price="$$"
-      /> */}
+      /> */
+
+      }
       <Navigation />
       <Router>
         <Routes>
