@@ -24,7 +24,6 @@ function Home() {
           <Route exact path="/" element={<LogIn />} />
         </Routes>
       </Router>
-      <AddMenuItemForm/>
    </div> 
     
   );
