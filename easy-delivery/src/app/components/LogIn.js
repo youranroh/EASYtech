@@ -3,36 +3,42 @@ import React, { useState } from 'react';
 import './LogIn.css';
 
 function LogIn() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [mode, setMode] = useState('login');
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      if (mode === 'login') {
-        
-        console.log('Sign Up or Log in')
-      }
-    };
-  
-    return (
-      <div>
-        <h1>{mode === 'login' ? 'Login' : 'Sign Up'}</h1>
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [mode, setMode] = useState('login');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (mode === 'login') {
+      console.log('Sign Up or Log in')
+    }
+  };
+
+  return (
+    <div className="login-container">
+      <div className="card">
+        <h1>Sign Up or Login</h1>
         <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
           <button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button>
         </form>
         <p>
@@ -42,7 +48,8 @@ function LogIn() {
           </button>
         </p>
       </div>
-    );
-  }
-  
-  export default LogIn;
+    </div>
+  );
+}
+
+export default LogIn;

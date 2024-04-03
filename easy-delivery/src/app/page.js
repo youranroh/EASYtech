@@ -4,8 +4,11 @@ import LogIn from './components/LogIn';
 import styles from './page.module.css';
 import Navigation from './components/Navigation';
 import RestaurantCard from './components/RestaurantCard';
+import './page.css';
+
 
 function Home() {
+  
   return (
     <div className={styles.container}>
       {/* <RestaurantCard
@@ -20,8 +23,10 @@ function Home() {
           <Route exact path="/" element={<LogIn />} />
         </Routes>
       </Router>
-    </div>
+   </div> 
+    
   );
+ 
 }
 
 export default Home;
