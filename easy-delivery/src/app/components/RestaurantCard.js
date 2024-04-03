@@ -8,7 +8,7 @@ const RestaurantCard = ({ imageSrc, restaurantName, rating, price }) => {
       <img src={imageSrc} alt="Restaurant" className={styles.image} />
       <div className={styles.details}>
         <h2 className={styles.restaurantName}>{restaurantName}</h2>
-        <div className={styles.rating}>{rating} stars</div>
+        <div className={styles.rating}>{rating}⭐️</div>
         <div className={styles.price}>Price: {price}</div>
       </div>
     </div>
