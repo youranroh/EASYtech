@@ -4,7 +4,10 @@ import LogIn from './log-in/LogIn';
 import styles from './page.module.css';
 import Navigation from './components/Navigation';
 import RestaurantCard from './components/RestaurantCard';
-import AddMenuItemForm from './components/AddMenuItem';
+import AddMenuItemForm from './add-item/AddMenuItem';
+import HomePage from './home/page';
+// import Home from
+
 
 function Home() {
   
@@ -22,6 +25,8 @@ function Home() {
       <Router>
         <Routes>
           <Route exact path="/" element={<LogIn />} />
+          <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
+          <Route exact path="/homepage" element={<HomePage />} />
         </Routes>
       </Router>
    </div> 
