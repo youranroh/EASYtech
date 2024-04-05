@@ -1,11 +1,11 @@
 'use client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LogIn from './log-in/LogIn';
+import LogIn from './components/log-in/LogIn';
 import styles from './page.module.css';
-import Navigation from './components/Navigation';
+import Navigation from './components/navigation/Navigation';
 import RestaurantCard from './components/RestaurantCard';
-import AddMenuItemForm from './add-item/AddMenuItem';
-import HomePage from './home/page';
+import AddMenuItemForm from './components/add-item/AddMenuItem';
+import HomePage from './components/home/page';
 // import Home from
 
 

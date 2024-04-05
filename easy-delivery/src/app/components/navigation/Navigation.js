@@ -4,7 +4,7 @@ import "./Navigation.css";
 const Navigation = () => {
     return (
         <nav className="navBar">
-            <img src={"./images/SignIn.png"}  alt="icon"/>
+            <img src={"../images/SignIn.png"}  alt="icon"/>
             <ul>
                 <li>
                     <a href="#">Shop</a>
