@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Navigation = () => {
     return (
         <nav className="navBar">
-            <img src={"../images/SignIn.png"}  alt="icon"/>
+            <Link href='/'><img src="/SignIn.png" alt="icon"/></Link>
             <ul>
                 <li>
                     <Link href='/add-item'>Add Item</Link>

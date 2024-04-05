@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LogIn from './log-in/LogIn';
 import styles from './page.module.css';
-import Navigation from './navigation/Navigation';
+import Navigation from './components/Navigation';
 import RestaurantCard from './components/RestaurantCard';
 import AddMenuItemForm from './add-item/AddMenuItemForm';
 import HomePage from './components/home/page';
@@ -23,7 +23,6 @@ function Home() {
       }
       <Navigation />
       <LogIn />
-      <AddMenuItemForm />
    </div> 
     
   );

@@ -3,7 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
+}
+
+.navBar img {
+    height: 40px;
 }
 
 .navBar ul {

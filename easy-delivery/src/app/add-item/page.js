@@ -1,6 +1,7 @@
 'use client';
 import AddMenuItemForm from './AddMenuItemForm';
 import styles from './page.module.css';
+import Navigation from '../components/Navigation';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         rating={4.5}
         price="$$"
       /> */}
+      <Navigation />
       <AddMenuItemForm />
     </div>
   );
