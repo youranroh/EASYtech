@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Navigation.css";
+import Link from 'next/link';
 
 const Navigation = () => {
     return (
@@ -7,7 +8,7 @@ const Navigation = () => {
             <img src={"../images/SignIn.png"}  alt="icon"/>
             <ul>
                 <li>
-                    <a href="#">Shop</a>
+                    <Link href='/add-item'>Add Item</Link>
                 </li>
                 <li>
                     <a href="#">Gift Cards</a>
