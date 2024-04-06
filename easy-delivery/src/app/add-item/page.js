@@ -14,6 +14,13 @@ function Home() {
       /> */}
       <Navigation />
       <AddMenuItemForm />
+
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<LogIn />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }

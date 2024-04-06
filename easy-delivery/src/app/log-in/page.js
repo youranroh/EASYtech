@@ -14,6 +14,13 @@ function Home() {
       /> */}
       <Navigation />
       <LogIn />
+
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<LogIn />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }

@@ -37,6 +37,14 @@ function Home() {
           price="$$"
         />
       </div>
+
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<LogIn />} />
+          <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
+          <Route exact path="/homepage" element={<HomePage />} />
+        </Routes>
+      </Router>
       
     </div>
   );
