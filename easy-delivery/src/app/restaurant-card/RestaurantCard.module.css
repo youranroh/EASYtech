@@ -66,4 +66,7 @@
   display: flex;
 }
 
+.restaurantName {
+  text-align: left;
+}
 

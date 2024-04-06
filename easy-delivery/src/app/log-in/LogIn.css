@@ -86,10 +86,15 @@
   margin-bottom: 20px;
 }
 
+
 .cardContent {
   margin-left: 10px;
 }
 
 .restaurantList {
   display: flex;
+}
+
+.restaurantName {
+  text-align: left;
 }
