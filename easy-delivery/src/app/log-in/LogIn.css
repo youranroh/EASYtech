@@ -19,16 +19,6 @@
   
 }
 
-.restaurantCard {
-  margin-top: 20px;
-  margin-left: 20px;
-  background-color: #92a6d9;
-  width: 200px;
-  height: 350px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
 .card h1{
   color:#ffffff;
 
@@ -83,4 +73,28 @@
 
 .form p button:hover {
   text-decoration: underline;
+}
+
+/*Styling for cards since its somehow linking to this css*/
+.restaurantCard {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #92a6d9;
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+.cardContent {
+  margin-left: 10px;
+}
+
+.restaurantList {
+  display: flex;
+}
+
+.restaurantName {
+  text-align: left;
 }
