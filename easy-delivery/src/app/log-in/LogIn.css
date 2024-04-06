@@ -19,6 +19,16 @@
   
 }
 
+.restaurantCard {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #92a6d9;
+  width: 200px;
+  height: 350px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 .card h1{
   color:#ffffff;
 

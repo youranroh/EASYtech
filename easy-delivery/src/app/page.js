@@ -29,12 +29,15 @@ function Home() {
       <Navigation />
       <Carousel items={foodCategories} />
 
-      <RestaurantCard
-        imageSrc="/example-restaurant.png"
-        restaurantName="Cool Restaurant"
-        rating={4.5}
-        price="$$"
-      />
+      <div class="restaurantList">
+        <RestaurantCard
+          imageSrc="/example-restaurant.png"
+          restaurantName="Cool Restaurant"
+          rating={4.5}
+          price="$$"
+        />
+      </div>
+      
     </div>
   );
 }
