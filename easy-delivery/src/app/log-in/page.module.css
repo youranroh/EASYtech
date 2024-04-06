@@ -1,6 +1,7 @@
 .container {
     min-height: 100vh;
-    background-color: #9FBAFF; /* or any shade of light blue you prefer */
+    /*background-color: #9FBAFF; /* or any shade of light blue you prefer */
+    background-color: white;
   }
   
   .card-container {

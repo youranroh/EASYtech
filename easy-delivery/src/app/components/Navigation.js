@@ -17,7 +17,7 @@ const Navigation = () => {
                     <a href="#">Offers</a>
                 </li>
                 <li>
-                    <a href="#">Sign In</a>
+                    <Link href='/log-in'>Log In</Link>
                 </li>
             </ul>
         </nav>

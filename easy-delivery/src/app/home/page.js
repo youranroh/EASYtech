@@ -1,18 +1,10 @@
 'use client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LogIn from './log-in/LogIn';
-import styles from './page.module.css';
-import Navigation from './components/Navigation';
-import Carousel from './components/Carousel';
 
-//import RestaurantCard from './components/RestaurantCard';
-//import AddMenuItemForm from './add-item/AddMenuItemForm';
-//import HomePage from './home/page';
-//import Link from 'next/link';
-// import Home from
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Carousel from './Carousel';
 
-
-function Home() {
+const Home = () => {
   const foodCategories = [
     { name: 'Fast Food', image: 'fast_food.jpg' },
     { name: 'Sushi', image: 'sushi.jpg' },
@@ -26,10 +18,11 @@ function Home() {
 
   return (
     <div>
+      <h1>Food Delivery</h1>
       <Navigation />
       <Carousel items={foodCategories} />
     </div>
   );
-}
+};
 
 export default Home;
