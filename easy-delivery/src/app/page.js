@@ -4,8 +4,9 @@ import LogIn from './log-in/LogIn';
 import styles from './page.module.css';
 import Navigation from './components/Navigation';
 import Carousel from './components/Carousel';
-
+import AddMenuItemForm from './add-item/AddMenuItemForm';
 import RestaurantCard from './restaurant-card/RestaurantCard';
+import HomePage from './home/page';
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
 //import HomePage from './home/page';
 //import Link from 'next/link';

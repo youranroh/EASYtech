@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AddMenuItem.css';
 
+
 function AddMenuItemForm() {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
