@@ -5,7 +5,7 @@ import styles from './page.module.css';
 import Navigation from './components/Navigation';
 import Carousel from './components/Carousel';
 
-//import RestaurantCard from './components/RestaurantCard';
+import RestaurantCard from './restaurant-card/RestaurantCard';
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
 //import HomePage from './home/page';
 //import Link from 'next/link';
@@ -28,6 +28,13 @@ function Home() {
     <div>
       <Navigation />
       <Carousel items={foodCategories} />
+
+      <RestaurantCard
+        imageSrc="/example-restaurant.png"
+        restaurantName="Cool Restaurant"
+        rating={4.5}
+        price="$$"
+      />
     </div>
   );
 }
