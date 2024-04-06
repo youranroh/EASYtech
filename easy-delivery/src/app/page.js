@@ -52,7 +52,7 @@ function Home() {
         <Routes>
           <Route exact path="/" element={<LogIn />} />
           <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
-          
+          <Route exact path="/homepage" element={<HomePage />} />
         </Routes>
       </Router>
       

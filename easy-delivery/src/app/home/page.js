@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Carousel from './Carousel';
+import Carousel from '../components/Carousel';
 
 const Home = () => {
   const foodCategories = [
