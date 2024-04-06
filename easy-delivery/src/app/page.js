@@ -14,7 +14,7 @@ import Carousel from './components/Carousel';
 
 function Home() {
   const foodCategories = [
-    { name: 'Fast Food', image: 'fast_food.jpg' },
+    { name: 'Fast Food', image: '/fast-food.png' },
     { name: 'Sushi', image: 'sushi.jpg' },
     { name: 'Chinese', image: 'chinese.jpg' },
     { name: 'Mexican', image: 'mexican.jpg' },
