@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Navigation = () => {
     return (
         <nav className="navBar">
-            <Link href='/'><img src="/SignIn.png" alt="icon"/></Link>
+            <a href='/'><img src="/SignIn.png" alt="icon"/></a>
             <ul>
                 <li>
                     <a href="#">Offers</a>
