@@ -11,9 +11,6 @@ const Navigation = () => {
                     <Link href='/add-item'>Add Item</Link>
                 </li>
                 <li>
-                    <a href="#">Gift Cards</a>
-                </li>
-                <li>
                     <a href="#">Offers</a>
                 </li>
                 <li>
