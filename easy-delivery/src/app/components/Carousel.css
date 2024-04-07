@@ -7,15 +7,16 @@
   .slides {
     display: flex;
     transition: transform 0.5s ease;
+    padding: 2em;
   }
   
   .slide {
-    flex: 0 0 100%;
+    flex: 0 0 20%; /* Each item occupies 33.33% of the container width */
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 200px; /* Adjust height as needed */
     background-size: cover;
     position: relative;
-  }
+  }  
   
   .category-name {
     position: absolute;
@@ -31,7 +32,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.0);
     border: none;
     color: black;
     font-size: 20px;
@@ -40,11 +41,11 @@
   }
   
   .prev {
-    left: 0;
+    left: 2em;
   }
   
   .next {
-    right: 0;
+    right: 2em;
   }
   
   .active {

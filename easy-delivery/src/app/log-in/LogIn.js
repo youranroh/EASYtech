@@ -15,7 +15,7 @@ function LogIn() {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container form">
       <div className="card">
         <h1>Sign Up or Login</h1>
         <form onSubmit={handleSubmit}>
@@ -41,7 +41,9 @@ function LogIn() {
           </div>
           <button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button>
         </form>
-        <p>
+
+        <br></br>
+        <p className="small">
           {mode === 'login' ? "Don't have an account? " : 'Forgot Password? '}
           <button onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
             {mode === 'login' ? 'Sign up' : 'Login'}

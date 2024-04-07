@@ -15,13 +15,13 @@ import HomePage from './home/page';
 
 function Home() {
   const foodCategories = [
-    { name: 'Fast Food', image: '/fast-food.png' },
-    { name: 'Sushi', image: 'sushi.jpg' },
-    { name: 'Chinese', image: 'chinese.jpg' },
-    { name: 'Mexican', image: 'mexican.jpg' },
-    { name: 'Cafe', image: 'cafe.jpg' },
-    { name: 'Burgers', image: 'burgers.jpg' },
-    { name: 'Pasta', image: 'pasta.jpg' },
+    { name: 'Lunch', image: '/fast-food.png' },
+    { name: 'Dinner', image: '#.jpg' },
+    { name: 'Breakfast', image: '#.jpg' },
+    { name: 'Meals', image: '#.jpg' },
+    { name: 'Kids', image: '#.jpg' },
+    { name: '#', image: '#.jpg' },
+    { name: '#', image: '#.jpg' },
     // Add more food categories as needed
   ];
 
