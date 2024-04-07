@@ -1,11 +1,15 @@
 'use client'
+import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import './LogIn.css';
 
 function LogIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mode, setMode] = useState('login');
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +43,7 @@ function LogIn() {
               required
             />
           </div>
-          <button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button>
+          <Link href="/"><button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button></Link>
         </form>
 
         <br></br>

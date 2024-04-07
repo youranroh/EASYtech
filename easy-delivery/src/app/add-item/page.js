@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddMenuItemForm from './AddMenuItemForm';
 import styles from './page.module.css';
-import Navigation from '../components/Navigation';
+import AuthNavigation from '../authenticated-navigation/AuthNavigation';
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
         rating={4.5}
         price="$$"
       /> */}
-      <Navigation />
+      <AuthNavigation />
       <AddMenuItemForm />
 
       <Router>

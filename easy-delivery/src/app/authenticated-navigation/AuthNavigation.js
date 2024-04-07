@@ -8,16 +8,16 @@ const Navigation = () => {
             <Link href='/'><img src="/SignIn.png" alt="icon"/></Link>
             <ul>
                 <li>
-                    <Link href='/add-item'>Add Item</Link>
+                    <Link href='#'>My Restaurants</Link>
                 </li>
                 <li>
-                    <a href="#">Gift Cards</a>
+                    <Link href='/add-item'>Add Item</Link>
                 </li>
                 <li>
                     <a href="#">Offers</a>
                 </li>
                 <li>
-                    <Link href='#'>My Restaurants</Link>
+                    <a href='/'>Sign Out</a>
                 </li>
             </ul>
         </nav>

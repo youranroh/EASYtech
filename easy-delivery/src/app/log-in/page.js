@@ -18,7 +18,7 @@ function Home() {
 
       <Router>
         <Routes>
-          <Route exact path="/" element={<LogIn />} />
+          <Route exact path="/." element={<LogIn />} />
         </Routes>
       </Router>
 
