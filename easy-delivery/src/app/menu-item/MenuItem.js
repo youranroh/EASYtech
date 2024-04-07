@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from './RestaurantCard.module.css'; 
+import styles from './MenuItem.module.css';
 
-const RestaurantCard = ({ imageSrc, restaurantName, rating, price }) => {
+const MenuItemCard = ({ imageSrc, itemName, rating, price }) => {
   return (
     <div className='restaurantCard'>
       <div className='imageContainer'>
-        <img src={imageSrc} alt="Restaurant" className={styles.image} />
+        <img src={imageSrc} alt="Food Item" className={styles.image} />
       </div>
       <div className='cardContent'>
-        <h2 className='restaurantName'>{restaurantName}</h2>
+        <h2 className='itemName'>{itemName}</h2>
         <div className='rating'>{rating} ⭐️</div>
         <div className='price'>Price: {price}</div>
       </div>
@@ -16,4 +16,4 @@ const RestaurantCard = ({ imageSrc, restaurantName, rating, price }) => {
   );
 }
 
-export default RestaurantCard;
+export default MenuItemCard;

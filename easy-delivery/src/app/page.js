@@ -7,7 +7,7 @@ import Navigation from './components/Navigation';
 import AuthNavigation from './authenticated-navigation/AuthNavigation';
 import Carousel from './components/Carousel';
 import AddMenuItemForm from './add-item/AddMenuItemForm';
-import RestaurantCard from './restaurant-card/RestaurantCard';
+import MenuItemCard from './menu-item/MenuItem';
 import HomePage from './home/page';
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
 //import HomePage from './home/page';
@@ -28,9 +28,9 @@ function App() {
   ];
 
   const dummyRestaurants = [
-    { id: 1, name: 'Cool Restaurant', imageSrc: '/example-restaurant.png', rating: 4.5, price: '$$' },
-    { id: 2, name: 'Fancy Place', imageSrc: '/example-restaurant.png', rating: 4.8, price: '$$$' },
-    { id: 3, name: 'Cozy Cafe', imageSrc: '/example-restaurant.png', rating: 4.2, price: '$' },
+    { id: 1, name: 'Margherita Pizza', imageSrc: '/margherita-pizza.webp', rating: 4.5, price: '$$' },
+    { id: 2, name: 'Chicken Alfredo', imageSrc: '/chiecken-alfredo.jpeg', rating: 4.8, price: '$$$' },
+    { id: 3, name: 'Tiramisu', imageSrc: '/tiramisu.jpg', rating: 4.2, price: '$' },
   ];
 
   return (
@@ -53,10 +53,10 @@ function App() {
 
       <div className="restaurantList">
       {dummyRestaurants.map((restaurant) => (
-          <RestaurantCard
+          <MenuItemCard
             key={restaurant.id}
             imageSrc={restaurant.imageSrc}
-            restaurantName={restaurant.name}
+            itemName={restaurant.name}
             rating={restaurant.rating}
             price={restaurant.price}
           />
