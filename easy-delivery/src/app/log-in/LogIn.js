@@ -48,7 +48,7 @@ function LogIn() {
 
         <br></br>
         <p className="small">
-          {mode === 'login' ? "Don't have an account? " : 'Forgot Password? '}
+          {mode === 'login' ? "Don't have an account? " : 'Have an Account?'}
           <button onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
             {mode === 'login' ? 'Sign up' : 'Login'}
           </button>
