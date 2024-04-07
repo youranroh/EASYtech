@@ -56,10 +56,6 @@
   cursor: pointer;
 }
 
-.form button:hover {
-  background-color: #007bff;
-}
-
 .form p {
   text-align: center;
 }
