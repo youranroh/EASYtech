@@ -1,7 +1,8 @@
 'use client';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import LogIn from './log-in/LogIn';
-import './page.module.css';
 import Navigation from './components/Navigation';
 import Carousel from './components/Carousel';
 import AddMenuItemForm from './add-item/AddMenuItemForm';
@@ -15,7 +16,7 @@ import HomePage from './home/page';
 
 function Home() {
   const foodCategories = [
-    { name: 'Lunch', image: '/#.png' },
+    { name: 'Lunch', image: '#.png' },
     { name: 'Dinner', image: '#.jpg' },
     { name: 'Breakfast', image: '#.jpg' },
     { name: 'Meals', image: '#.jpg' },
@@ -34,10 +35,14 @@ function Home() {
   return (
     <div>
       <Navigation />
-      <h1 className='welcome'>Welcome!</h1>
+      <br></br>
+      <h2>Welcome!</h2>
       <Carousel items={foodCategories} />
 
-      <div class="restaurantList">
+      <br></br>
+      <h2>Your favorites:</h2>
+
+      <div className="restaurantList">
       {dummyRestaurants.map((restaurant) => (
           <RestaurantCard
             key={restaurant.id}

@@ -1,7 +1,13 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 1200px;
 }
 
 .slides {
@@ -12,20 +18,24 @@
 
 .slide {
   display: inline-block; /* Display slides in a row */
-  width: 20%; /* Adjust width as needed */
+  width: calc(20% - 20px); /* Adjust width as needed */
   height: 200px; /* Adjust height as needed */
   background-size: cover;
   position: relative;
+  margin-right: 20px; /* Add margin to create space between slides */
+  background-color: aqua;
+  border-radius: 15px;
 }
 
+
 .category-name {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  text-align: center;
+  padding: 85px 0;
   color: white;
   font-size: 20px;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .arrow {
