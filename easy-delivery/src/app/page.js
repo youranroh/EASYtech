@@ -42,7 +42,8 @@ function App() {
           <Route exact path='/add-item' element={<AuthNavigation />} />
           <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
           <Route exact path="/homepage" element={<HomePage />} />
-        </Routes>
+          <Route path="*" element={<PageNotFound />} />
+          </Routes>
       </Router>
       <br></br>
       <h2>Welcome!</h2>
