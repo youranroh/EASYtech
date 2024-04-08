@@ -1,14 +1,13 @@
 .container {
-    min-height: 100vh;
-    /*background-color: #9FBAFF; /* or any shade of light blue you prefer */
-    background-color: white;
-  }
+  min-height: 100vh;
+  background-color: white;
+}
   
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
   

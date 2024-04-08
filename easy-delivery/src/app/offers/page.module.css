@@ -1,0 +1,9 @@
+.container {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.button {
+    border-radius: 25%;
+    background-color: #547ce2;
+}

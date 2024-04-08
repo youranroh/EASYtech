@@ -8,7 +8,7 @@ const Navigation = () => {
             <a href='/'><img src="/SignIn.png" alt="icon"/></a>
             <ul>
                 <li>
-                    <a href="#">Offers</a>
+                    <a href="/offers">Offers</a>
                 </li>
                 <li>
                     <Link href='/log-in'>Log In</Link>

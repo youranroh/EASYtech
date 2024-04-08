@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+.offers-page {
+    padding: 5em;
+}
+  
+.offer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+  
+.offer-card {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display:flex;
+    justify-content: space-between;
+}
+  
+.offer-card h3 {
+    margin-top: 0;
+    color: #547CE2;
+}
+  
+.offer-card p {
+    margin-bottom: 0;
+}
+  
+.button {
+    border-radius: 30px;
+    border: none;
+    background-color: #547CE2;
+    padding: 10px;
+}
