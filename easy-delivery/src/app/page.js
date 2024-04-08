@@ -9,6 +9,7 @@ import Carousel from './components/Carousel';
 import AddMenuItemForm from './add-item/AddMenuItemForm';
 import MenuItemCard from './menu-item/MenuItem';
 import HomePage from './home/page';
+import PageNotFound from './components/PageNotFound';
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
 //import HomePage from './home/page';
 //import Link from 'next/link';
