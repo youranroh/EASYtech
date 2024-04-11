@@ -18,20 +18,52 @@ import PageNotFound from './components/PageNotFound';
 
 function App() {
   const foodCategories = [
-    { name: 'Lunch', image: '#.png' },
-    { name: 'Dinner', image: '#.jpg' },
-    { name: 'Breakfast', image: '#.jpg' },
-    { name: 'Meals', image: '#.jpg' },
-    { name: 'Kids', image: '#.jpg' },
-    { name: '#', image: '#.jpg' },
-    { name: '#', image: '#.jpg' },
+    { name: 'Appetizers', image: '/apps.bmp' },
+    { name: 'Pasta', image: '/pasta.bmp' },
+    { name: 'Pizza', image: '/pizza.bmp' },
+    { name: 'Salad', image: '/salad.bmp' },
+    { name: 'Dessert', image: '/dessert.bmp' },
+    { name: 'Beverages', image: '/beverages.bmp' },
+    { name: 'Kids', image: '/kids.bmp' },
     // Add more food categories as needed
   ];
 
-  const dummyRestaurants = [
-    { id: 1, name: 'Margherita Pizza', imageSrc: '/margherita-pizza.webp', rating: 4.5, price: '$$' },
-    { id: 2, name: 'Chicken Alfredo', imageSrc: '/chiecken-alfredo.jpeg', rating: 4.8, price: '$$$' },
-    { id: 3, name: 'Tiramisu', imageSrc: '/tiramisu.jpg', rating: 4.2, price: '$' },
+  const dummyMenuItems = [
+    { 
+      id: 1, 
+      name: 'Margherita Pizza', 
+      imageSrc: '/margherita-pizza.webp', 
+      price: '14.99',
+      description: 'San Marzano tomatoes, fresh basil, creamy mozzarella on a crisp crust'
+    },
+    { 
+      id: 2, 
+      name: 'Chicken Alfredo', 
+      imageSrc: '/chicken-alfredo.jpeg', 
+      price: '12.99',
+      description: 'Tender grilled chicken, rich Alfredo sauce, and al dente fettuccine, topped with Parmesan cheese', 
+    },
+    { 
+      id: 3, 
+      name: 'Tiramisu', 
+      imageSrc: '/tiramisu.jpg', 
+      price: '9.99',
+      description: 'Layers of delicate ladyfingers soaked in espresso and rum, nestled between creamy mascarpone cheese and dusted with cocoa powder'
+    },
+    {
+      id: 4,
+      name: "Caprese Salad",
+      imageSrc: "/caprese-salad.bmp",
+      description: "Ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze",
+      price: "9.99"
+    },
+    {
+      id: 5,
+      name: "Spaghetti Carbonara",
+      imageSrc: "/spaghetti-carbonara.bmp",
+      description: "Spaghetti tossed with crispy pancetta, eggs, Parmesan cheese, and black pepper",
+      price: "15.99"
+    },
   ];
 
   return (
@@ -54,12 +86,12 @@ function App() {
       <h2>Your favorites:</h2>
 
       <div className="restaurantList">
-      {dummyRestaurants.map((restaurant) => (
+      {dummyMenuItems.map((restaurant) => (
           <MenuItemCard
             key={restaurant.id}
             imageSrc={restaurant.imageSrc}
             itemName={restaurant.name}
-            rating={restaurant.rating}
+            description={restaurant.description}
             price={restaurant.price}
           />
         ))}
