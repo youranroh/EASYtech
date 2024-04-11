@@ -8,7 +8,6 @@ import AuthNavigation from './authenticated-navigation/AuthNavigation';
 import Carousel from './components/Carousel';
 import AddMenuItemForm from './add-item/AddMenuItemForm';
 import MenuItemCard from './menu-item/MenuItem';
-import HomePage from './home/page';
 import PageNotFound from './components/PageNotFound';
 import './page.css'
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
@@ -99,7 +98,7 @@ function App() {
           <Route exact path='/log-in' element={<AuthNavigation />} />
           <Route exact path='/add-item' element={<AuthNavigation />} />
           <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
-          <Route exact path="/homepage" element={<HomePage />} />
+
           <Route path="*" element={<PageNotFound />} />
           </Routes>
       </Router>
