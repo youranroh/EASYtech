@@ -1,5 +1,5 @@
-* {
-  background-color: white;
+.body {
+  background-color: #9FBAFF;
 }
 
 .container {
@@ -17,8 +17,12 @@
 
 .restaurantList {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: fit-content(200px) fit-content(200px) fit-content(200px) fit-content(200px);
+  justify-content: center;
 }
 
 .welcome {
-  padding: 2em; 
+  padding-top: 1em;
+  font-size: x-large;
 }

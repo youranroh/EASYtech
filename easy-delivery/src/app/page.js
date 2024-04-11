@@ -10,6 +10,7 @@ import AddMenuItemForm from './add-item/AddMenuItemForm';
 import MenuItemCard from './menu-item/MenuItem';
 import HomePage from './home/page';
 import PageNotFound from './components/PageNotFound';
+import './page.css'
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
 //import HomePage from './home/page';
 //import Link from 'next/link';
@@ -64,10 +65,34 @@ function App() {
       description: "Spaghetti tossed with crispy pancetta, eggs, Parmesan cheese, and black pepper",
       price: "15.99"
     },
+    {
+      id: 6,
+      name: 'Chicken Piccata',
+      imageSrc: '/chicken-piccata.bmp',
+      description: 'Tender chicken breast sautéed in lemon butter sauce with capers, served with pasta',
+      price: '17.99'
+    },
+    {
+      id: 7,
+      name: 'Eggplant Parmesan',
+      imageSrc: '/eggplant-parmesan.bmp',
+      description: 'Layers of breaded eggplant, marinara sauce, and melted mozzarella cheese',
+      price: '13.99'
+    },
+    {
+      id: 8,
+      name: 'Margherita Panini',
+      imageSrc: '/margherita-panini.bmp',
+      description: 'Fresh basil, ripe tomatoes, and melted mozzarella pressed between artisanal bread',
+      price: '11.99'
+    }
+    
+    
+    
   ];
 
   return (
-    <div>
+    <div className='body'>
       <Router>
         <Routes>
           <Route exact path="/" element={<Navigation />} />
@@ -79,7 +104,7 @@ function App() {
           </Routes>
       </Router>
       <br></br>
-      <h2>Welcome!</h2>
+      <h2 className='welcome'>Welcome!</h2>
       <Carousel items={foodCategories} />
 
       <br></br>
