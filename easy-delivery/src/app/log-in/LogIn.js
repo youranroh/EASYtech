@@ -1,5 +1,5 @@
 'use client'
-import { useNavigate } from "react-router-dom";
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import './LogIn.css';
