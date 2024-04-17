@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 
 
 //load the model
-//const Item = require('../../')
+const Item = require('../../models/Item')
 
 //add a new item
 router.post('/', (req,res) => {
