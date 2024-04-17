@@ -1,7 +1,7 @@
 import React from 'react';
 import './MenuItem.css';
 
-const MenuItemCard = ({ imageSrc, itemName, description, price }) => {
+const MenuItemCard = ({ imageSrc, name, description, price }) => {
   return (
     <div className='restaurantCard'>
       <div className='imageContainer'>
@@ -9,7 +9,7 @@ const MenuItemCard = ({ imageSrc, itemName, description, price }) => {
       </div>
       <div className='cardContent'>
         <div className='header'>
-          <div className='itemName'>{itemName}</div>
+          <div className='name'>{name}</div>
           <div className='price'>${price}</div>
         </div>
         <div className='description'>{description} </div>
