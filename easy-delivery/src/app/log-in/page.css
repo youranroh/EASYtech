@@ -1,0 +1,16 @@
+.page {
+  background-color: #9FBAFF;
+}
+.container {
+  min-height: 100vh;
+  background-color: white;
+}
+  
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+  

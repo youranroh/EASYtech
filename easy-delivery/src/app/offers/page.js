@@ -1,5 +1,5 @@
 'use client';
-import styles from './page.module.css';
+import './page.css';
 import Navigation from '../components/Navigation';
 import Offers from './Offers';
 import './Offers.css'
@@ -16,7 +16,7 @@ function Home() {
     ];
 
     return(
-    <div className={styles.container}>
+    <div className='page'>
         <Navigation />
         <br></br>
         <h1>Ongoing Offers</h1>

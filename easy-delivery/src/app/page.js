@@ -98,10 +98,6 @@ function App() {
           <Route exact path='/log-in' element={<AuthNavigation />} />
           <Route exact path='/add-item' element={<AuthNavigation />} />
           <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d25b7a0b896a6e1e0e2669cfbc520aa973a974c
           <Route path="*" element={<PageNotFound />} />
           </Routes>
       </Router>
