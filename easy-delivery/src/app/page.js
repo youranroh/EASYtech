@@ -106,7 +106,7 @@ function App() {
       <Carousel items={foodCategories} />
 
       <br></br>
-      <h2>Your favorites:</h2>
+      <h2>Favorites:</h2>
 
       <div className="restaurantList">
       {dummyMenuItems.map((restaurant) => (
