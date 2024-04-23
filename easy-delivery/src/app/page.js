@@ -86,7 +86,7 @@ function App() {
       description: 'Fresh basil, ripe tomatoes, and melted mozzarella pressed between artisanal bread',
       price: '11.99',
       tag: 'Appetizers',
-    }
+    },
     {
     id: 9,
     name: 'Freshly Squeezed Juice',
@@ -94,8 +94,23 @@ function App() {
     description: 'Freshly Squeezed Grapefruit Juice',
     price: '4.99',
     tag: 'Beverages',
-    }
-
+    },
+   {
+    id: 10,
+    name: 'Chicken Tenders',
+    imageSrc: '/chickenTenders.jpeg',
+    description: 'Herb-breaded chicken breast tenders, served with ketchup and honey mustard',
+    price: '9.99',
+    tag: 'Kids',
+   },
+   {
+    id: 11,
+    name: 'Mac & Cheese with Tots',
+    imageSrc: '/mac&Cheese.avif',
+    description: 'Cheddar Mac & Cheese with Crispy Idaho Tots',
+    price: '10.99',
+    tag: 'Kids',
+   }
 
   ];
 
