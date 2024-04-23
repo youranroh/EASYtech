@@ -87,6 +87,16 @@ function App() {
       price: '11.99',
       tag: 'Appetizers',
     }
+    {
+    id: 9,
+    name: 'Freshly Squeezed Juice',
+    imageSrc: '/Grapefruit-Crush-scaled.jpg',
+    description: 'Freshly Squeezed Grapefruit Juice',
+    price: '4.99',
+    tag: 'Beverages',
+    }
+
+
   ];
 
   const [filteredItems, setFilteredItems] = useState(dummyMenuItems);
