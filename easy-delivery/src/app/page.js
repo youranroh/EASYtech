@@ -1,6 +1,7 @@
 'use client';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import Navigation from './components/Navigation';
 import AuthNavigation from './components/AuthNavigation';
@@ -9,11 +10,6 @@ import AddMenuItemForm from './add-item/AddMenuItemForm';
 import MenuItemCard from './components/MenuItem';
 import PageNotFound from './components/PageNotFound';
 import './page.css'
-//import AddMenuItemForm from './add-item/AddMenuItemForm';
-//import HomePage from './home/page';
-//import Link from 'next/link';
-// import Home from
-
 
 function App() {
   const foodCategories = [
@@ -24,7 +20,6 @@ function App() {
     { name: 'Dessert', image: '/dessert.bmp' },
     { name: 'Beverages', image: '/beverages.bmp' },
     { name: 'Kids', image: '/kids.bmp' },
-    // Add more food categories as needed
   ];
 
   const dummyMenuItems = [
@@ -94,7 +89,12 @@ function App() {
     }
   ];
 
-  
+  const [filteredItems, setFilteredItems] = useState(dummyMenuItems);
+
+  const handleCategoryClick = (categoryName) => {
+    const filtered = dummyMenuItems.filter(item => item.tag === categoryName);
+    setFilteredItems(filtered);
+  };
 
   return (
     <div className='body'>
@@ -109,13 +109,13 @@ function App() {
       </Router>
       <br></br>
       <h2 className='welcome'>Welcome!</h2>
-      <Carousel items={foodCategories} />
+      <Carousel items={foodCategories} onCategoryClick={handleCategoryClick}/>
 
       <br></br>
       <h2>Favorites:</h2>
 
       <div className="restaurantList">
-      {dummyMenuItems.map((restaurant) => (
+      {filteredItems.map((restaurant) => (
           <MenuItemCard
             key={restaurant.id}
             imageSrc={restaurant.imageSrc}
@@ -125,6 +125,7 @@ function App() {
           />
         ))}
       </div>
+      
       
     </div>
   );

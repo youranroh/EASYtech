@@ -64,7 +64,6 @@
   display: block;
 }
 
-.noBorder { 
-  border: none;
+.pointer { 
   cursor: pointer;
 }
