@@ -56,17 +56,22 @@ function AddMenuItemForm() {
         />
       </div>
       <div>
-        <label htmlFor="category">Category of Food:</label>
+        <label htmlFor="tag">Category of Food:</label>
         <select
-          id="category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
+          id="tag"
+          value={tag}
+          onChange={(e) => setTag(e.target.value)}
           required
         >
           <option value="">Select Category</option>
           <option value="Appetizer">Appetizer</option>
-          <option value="Main Course">Main Course</option>
+          <option value="Main Course">Pasta</option>
+          <option value="Dessert">Pizza</option>
+          <option value="Dessert">Salad</option>
           <option value="Dessert">Dessert</option>
+          <option value="Dessert">Beverages</option>
+          <option value="Dessert">Kids</option>
+          
         </select>
       </div>
       <div>
@@ -88,25 +93,7 @@ function AddMenuItemForm() {
           required
         />
       </div>
-      <div>
-        <label htmlFor="tag">Category of Food:</label>
-        <select
-          id="tag"
-          value={tag}
-          onChange={(e) => setTag(e.target.value)}
-          required
-        >
-          <option value="">Select Category</option>
-          <option value="Appetizer">Appetizer</option>
-          <option value="Main Course">Pasta</option>
-          <option value="Dessert">Pizza</option>
-          <option value="Dessert">Salad</option>
-          <option value="Dessert">Dessert</option>
-          <option value="Dessert">Beverages</option>
-          <option value="Dessert">Kids</option>
-          
-        </select>
-      </div>
+
       <button type="submit">Add Menu Item</button>
     </form>
   );
