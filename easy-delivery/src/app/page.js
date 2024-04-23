@@ -33,7 +33,8 @@ function App() {
       name: 'Margherita Pizza', 
       imageSrc: '/margherita-pizza.webp', 
       price: '14.99',
-      description: 'San Marzano tomatoes, fresh basil, creamy mozzarella on a crisp crust'
+      description: 'San Marzano tomatoes, fresh basil, creamy mozzarella on a crisp crust',
+      tag: 'Pizza',
     },
     { 
       id: 2, 
@@ -41,53 +42,59 @@ function App() {
       imageSrc: '/chicken-alfredo.jpeg', 
       price: '12.99',
       description: 'Tender grilled chicken, rich Alfredo sauce, and al dente fettuccine, topped with Parmesan cheese', 
+      tag: 'Pasta',
     },
     { 
       id: 3, 
       name: 'Tiramisu', 
       imageSrc: '/tiramisu.jpg', 
       price: '9.99',
-      description: 'Layers of delicate ladyfingers soaked in espresso and rum, nestled between creamy mascarpone cheese and dusted with cocoa powder'
+      description: 'Layers of delicate ladyfingers soaked in espresso and rum, nestled between creamy mascarpone cheese and dusted with cocoa powder',
+      tag: 'Dessert',
     },
     {
       id: 4,
       name: "Caprese Salad",
       imageSrc: "/caprese-salad.bmp",
       description: "Ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze",
-      price: "9.99"
+      price: "9.99",
+      tag: 'Salad',
     },
     {
       id: 5,
       name: "Spaghetti Carbonara",
       imageSrc: "/spaghetti-carbonara.bmp",
       description: "Spaghetti tossed with crispy pancetta, eggs, Parmesan cheese, and black pepper",
-      price: "15.99"
+      price: "15.99",
+      tag: 'Pasta',
     },
     {
       id: 6,
       name: 'Chicken Piccata',
       imageSrc: '/chicken-piccata.bmp',
       description: 'Tender chicken breast sautéed in lemon butter sauce with capers, served with pasta',
-      price: '17.99'
+      price: '17.99',
+      tag: 'Pasta',
     },
     {
       id: 7,
       name: 'Eggplant Parmesan',
       imageSrc: '/eggplant-parmesan.bmp',
       description: 'Layers of breaded eggplant, marinara sauce, and melted mozzarella cheese',
-      price: '13.99'
+      price: '13.99',
+      tag: 'Appetizers',
     },
     {
       id: 8,
       name: 'Margherita Panini',
       imageSrc: '/margherita-panini.bmp',
       description: 'Fresh basil, ripe tomatoes, and melted mozzarella pressed between artisanal bread',
-      price: '11.99'
+      price: '11.99',
+      tag: 'Appetizers',
     }
-    
-    
-    
   ];
+
+  
 
   return (
     <div className='body'>

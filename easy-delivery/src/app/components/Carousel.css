@@ -57,9 +57,14 @@
 }
 
 .next {
-  right: 0.5em;
+  right: 2em;
 }
 
 .active {
   display: block;
+}
+
+.noBorder { 
+  border: none;
+  cursor: pointer;
 }

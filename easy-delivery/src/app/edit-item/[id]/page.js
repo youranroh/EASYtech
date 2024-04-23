@@ -9,6 +9,7 @@ function updateItemInfo( {params}) {
         price: '',
         description: '',
         image: '',
+        tag: '',
     });
 
     const router = useRouter();
@@ -24,6 +25,7 @@ function updateItemInfo( {params}) {
                 price: res.data.price,
                 description: res.data.description,
                 image: res.data.image,
+                tag: res.tag.image,
             });
         })
         .catch((err) => {
@@ -39,6 +41,7 @@ function updateItemInfo( {params}) {
             price: item.price,
             description: item.description,
             image: item.image,
+            tag: item.tag,
         };
 
         axios

@@ -7,6 +7,7 @@ function AddMenuItemForm() {
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
+  const [tag, setTag] = useState(''); //This sets the tag for the carousel
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,13 +16,15 @@ function AddMenuItemForm() {
       name,
       price,
       category,
-      description
+      description,
+      tag
     });
 
     setName('');
     setPrice('');
     setCategory('');
     setDescription('');
+    setTag('');
   };
 
   const handleImageUpload = (e) => {
@@ -84,6 +87,25 @@ function AddMenuItemForm() {
           onChange={(e) => handleImageUpload(e)}
           required
         />
+      </div>
+      <div>
+        <label htmlFor="tag">Category of Food:</label>
+        <select
+          id="tag"
+          value={tag}
+          onChange={(e) => setTag(e.target.value)}
+          required
+        >
+          <option value="">Select Category</option>
+          <option value="Appetizer">Appetizer</option>
+          <option value="Main Course">Pasta</option>
+          <option value="Dessert">Pizza</option>
+          <option value="Dessert">Salad</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Dessert">Beverages</option>
+          <option value="Dessert">Kids</option>
+          
+        </select>
       </div>
       <button type="submit">Add Menu Item</button>
     </form>
