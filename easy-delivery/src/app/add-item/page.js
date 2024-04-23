@@ -1,12 +1,12 @@
 'use client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddMenuItemForm from './AddMenuItemForm';
-import styles from './page.module.css';
-import AuthNavigation from '../authenticated-navigation/AuthNavigation';
+import './page.css';
+import AuthNavigation from '../components/AuthNavigation';
 
 function Home() {
   return (
-    <div className={styles.container}>
+    <div className='page'>
       {/* <RestaurantCard
         imageSrc="url_to_your_image.jpg"
         restaurantName="Your Restaurant Name"

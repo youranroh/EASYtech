@@ -3,12 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import './LogIn.css';
+import { useRouter } from 'next/navigation';
 
 function LogIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mode, setMode] = useState('login');
-
+  const router = new useRouter();
   
 
   const handleSubmit = (e) => {
@@ -16,6 +17,7 @@ function LogIn() {
     if (mode === 'login') {
       console.log('Sign Up or Log in')
     }
+    router.push('/')
   };
 
   return (
@@ -43,7 +45,7 @@ function LogIn() {
               required
             />
           </div>
-          <Link href="/"><button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button></Link>
+          <button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button>
         </form>
 
         <br></br>

@@ -39,7 +39,7 @@
   grid-template-columns: 2fr 1fr;
 }
 
-.itemName {
+.name {
   margin: 0;
   color: black;
   font-size:larger;

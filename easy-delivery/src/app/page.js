@@ -2,12 +2,11 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import LogIn from './log-in/LogIn';
 import Navigation from './components/Navigation';
-import AuthNavigation from './authenticated-navigation/AuthNavigation';
+import AuthNavigation from './components/AuthNavigation';
 import Carousel from './components/Carousel';
 import AddMenuItemForm from './add-item/AddMenuItemForm';
-import MenuItemCard from './menu-item/MenuItem';
+import MenuItemCard from './components/MenuItem';
 import PageNotFound from './components/PageNotFound';
 import './page.css'
 //import AddMenuItemForm from './add-item/AddMenuItemForm';
@@ -113,7 +112,7 @@ function App() {
           <MenuItemCard
             key={restaurant.id}
             imageSrc={restaurant.imageSrc}
-            itemName={restaurant.name}
+            name={restaurant.name}
             description={restaurant.description}
             price={restaurant.price}
           />
