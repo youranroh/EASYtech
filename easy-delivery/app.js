@@ -1,26 +1,27 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-
 const app = express();
+app.get('/', (req, res) => res.send('Hello world!'));
 const port = process.env.PORT || 8082;
+const mongoose = require('mongoose');
+const cors =require('cors');
 
-// Middleware
-app.use(cors({ origin: true, credentials: true }));
-app.use(express.json());
+app.listen(port, () => console.log(`Server running on port ${port}`));
 
-// Routes
+app.use (cors({origin:true, credentials: true}));
+app.get('/', (req,res) => res.send('Hello World!'));
+app.use(express.json({extended:false})); //required line
+
 const items = require('./routes/api/items');
 app.use('/api/items', items);
 
-// MongoDB Connection
-const conn_str = 'mongodb+srv://youran:1111@cluster0.4w3xybo.mongodb.net/yourdatabase';
+const conn_str = 'mongodb+srv://youran:1111@cluster0.4w3xybo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-mongoose.connect(conn_str, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('MongoDB Connection Succeeded...');
+mongoose.set('strictQuery',false);
+mongoose.connect(conn_str).then(()=>{
     app.listen(port, () => console.log(`Server running on port ${port}`));
-  })
-  .catch(err => {
-    console.error('Error in DB connection:', err);
-  });
+    console.log('MongoDB Connection Succeeded...')
+})
+.catch(err => {
+    console.log('Error in DB connection');
+});
+
