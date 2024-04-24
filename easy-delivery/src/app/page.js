@@ -110,7 +110,48 @@ function App() {
     description: 'Cheddar Mac & Cheese with Crispy Idaho Tots',
     price: '10.99',
     tag: 'Kids',
+   },
+   {
+    id: 12,
+    name: 'Fountain Drink',
+    imageSrc: '/fountaindrink.jpeg',
+    description: 'Your choice of any of our fountain drinks/sodas',
+    price: '2.99',
+    tag: 'Beverages',
+   },
+   {
+    id: 13,
+    name: 'Molten Lava Cake',
+    imageSrc: '/LavaCake.webp',
+    description: 'Gooey Chocoloate Lava cake topped with fresh strawberries',
+    price: '9.99',
+    tag: 'Dessert',
+   },
+   {
+    id: 14,
+    name: 'Spicy Southwest Salad',
+    imageSrc: '/spicy-southwest-salad-recipe.png',
+    description: 'Spinach, fresh cherry tomatoes, grilled chicken, tortilla strips, purple cabbage, tossed in spicy chipotle sauce',
+    price: '11.99',
+    tag: 'Salad',
+   },
+   {
+    id: 15,
+    name: 'Cheese Pizza',
+    imageSrc: '/cheesepizza.jpeg',
+    description: 'House made crust baked in a blend of mozzerella, parmesan, and peccorino cheeses.',
+    price: '13.99',
+    tag: 'Pizza',
+   },
+   {
+    id: 16,
+    name: 'Buffalo Chicken Pizza',
+    imageSrc: '/buffalochickenpizza.jpeg',
+    description: 'House made crust baked in a blend of mozzerella and monterey jack, topped with chicken, onions, peppers, buffalo sauce, and ranch',
+    price: '15.99',
+    tag: 'Pizza',
    }
+
 
   ];
 
