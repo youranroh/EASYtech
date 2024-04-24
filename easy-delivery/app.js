@@ -5,7 +5,7 @@ const port = process.env.PORT || 8082;
 const mongoose = require('mongoose');
 const cors =require('cors');
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+//app.listen(port, () => console.log(`Server running on port ${port}`));
 
 app.use (cors({origin:true, credentials: true}));
 app.get('/', (req,res) => res.send('Hello World!'));
