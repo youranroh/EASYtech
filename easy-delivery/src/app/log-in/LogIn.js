@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import UserContext from '../../../context/UserContext';
-import { useRouter } from 'next/navigation';
-import './LogIn.css';
 import Link from 'next/link';
+import './LogIn.css';
 
 const LogIn = () => {
     const router = useRouter();

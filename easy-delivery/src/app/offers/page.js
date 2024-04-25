@@ -1,10 +1,8 @@
 'use client';
-import './page.css';
+import { UserProvider } from '../../../context/UserContext';
 import Navigation from '../components/Navigation';
 import Offers from './Offers';
-import { UserProvider } from '../../../context/UserContext';
-import './Offers.css'
-
+import './page.css';
 
 function Home() {
     const offersData = [

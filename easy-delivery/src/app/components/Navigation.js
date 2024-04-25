@@ -1,9 +1,9 @@
 'use client'
 import React, { useContext } from 'react';
-import "./Navigation.css";
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import UserContext from '../../../context/UserContext';
+import Link from 'next/link';
+import "./Navigation.css";
 
 const Navigation = () => {
     const { userData, setUserData } = useContext(UserContext);
@@ -12,7 +12,7 @@ const Navigation = () => {
     const handleLogout = () => {
         setUserData({ token: undefined, user: undefined }); // Clear user data
         localStorage.removeItem('auth-token'); // Clear the token from local storage
-        router.push('/log-in'); // Redirect to the login page
+        router.push('/');
     };
 
     const login = () => {

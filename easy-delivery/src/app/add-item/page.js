@@ -1,8 +1,8 @@
 'use client';
-import AddMenuItemForm from './AddMenuItemForm';
-import './page.css';
-import Navigation from '../components/Navigation';
 import { UserProvider } from '../../../context/UserContext';
+import AddMenuItemForm from './AddMenuItemForm';
+import Navigation from '../components/Navigation';
+import './page.css';
 
 function Home() {
   return (

@@ -1,9 +1,8 @@
 'use client';
 import { UserProvider } from '../../../context/UserContext'
-import LogIn from './LogIn';
-import LogInForm from './LogIn';
-import './page.css';
 import Navigation from '../components/Navigation';
+import LogIn from './LogIn';
+import './page.css';
 
 function Home() {
   return (
@@ -11,7 +10,7 @@ function Home() {
       <div className='page'>
         <Navigation />
         <div className='content'>
-          <LogInForm />
+          <LogIn />
         </div>
       </div>
     </UserProvider>

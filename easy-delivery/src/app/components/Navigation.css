@@ -11,6 +11,10 @@
     margin: 5px;
 }
 
+.navBar img:hover {
+    transform: translateY(3px);
+}
+
 .navBar ul {
     padding: 0;
     margin: 0;
