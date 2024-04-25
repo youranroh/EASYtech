@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Carousel from './components/Carousel';
 import MenuItemCard from './components/MenuItem';
 import { UserProvider } from '../../context/UserContext';
+import Home from './add-item/page';
 import './page.css'
 
 function App() {
@@ -36,12 +37,20 @@ function App() {
     { id: 16, name: 'Buffalo Chicken Pizza', imageSrc: '/buffalochickenpizza.jpeg', description: 'House made crust baked in a blend of mozzerella and monterey jack, topped with chicken, onions, peppers, buffalo sauce, and ranch', price: '15.99', tag: 'Pizza' }
   ];
 
-  const [filteredItems, setFilteredItems] = useState(dummyMenuItems);
+  const [menuItems, setMenuItems] = useState(dummyMenuItems); //state for default view
+  const [filteredItems, setFilteredItems] = useState(dummyMenuItems); //state for filtered view
+
+
+  const handleAddMenuItem = (newMenuItem) => {
+    setMenuItems([...menuItems, newMenuItem]);
+    setFilteredItems([...filteredItems, newMenuItem]);
+  };
 
   const [items, setItems] = useState('Menu Items:')
 
-
   const handleCategoryClick = (categoryName) => {
+    //const filtered = menuItems.filter(item => item.tag === categoryName);
+    //setFilteredItems(filtered);
     if (filteredItems[0].tag === categoryName && filteredItems[1].tag === categoryName) {
       setFilteredItems(dummyMenuItems);
       setItems('Menu Items:')
@@ -49,7 +58,7 @@ function App() {
       const filtered = dummyMenuItems.filter(item => item.tag === categoryName);
       setFilteredItems(filtered);
       setItems(categoryName + ':')
-    }
+     }
   };
 
   return (
@@ -61,8 +70,8 @@ function App() {
       <Carousel items={foodCategories} onCategoryClick={handleCategoryClick}/>
 
       <br></br>
-      <h2 className='welcome'>{items}</h2>
-
+      <h2 className='welcome'>Menu Items:</h2>
+      
       <div className="restaurantList">
       {filteredItems.map((restaurant) => (
           <MenuItemCard
@@ -74,6 +83,8 @@ function App() {
           />
         ))}
       </div>
+      {/* Render the Home component and pass onAddMenuItem function */}
+      {/* <Home onAddMenuItem={handleAddMenuItem} /> */}
     </div>
     </UserProvider>
   );

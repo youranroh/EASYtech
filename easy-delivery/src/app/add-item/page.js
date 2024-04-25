@@ -4,12 +4,12 @@ import AddMenuItemForm from './AddMenuItemForm';
 import Navigation from '../components/Navigation';
 import './page.css';
 
-function Home() {
+function Home({ onAddMenuItem }) {
   return (
     <UserProvider>
       <div className='page'>
         <Navigation />
-        <AddMenuItemForm />
+        <AddMenuItemForm onAddMenuItem={onAddMenuItem} />
       </div>
     </UserProvider>
   );

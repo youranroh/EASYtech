@@ -1,5 +1,6 @@
 import React from 'react';
 import './MenuItem.css';
+import Home from '../add-item/page';
 
 const MenuItemCard = ({ imageSrc, name, description, price }) => {
   return (

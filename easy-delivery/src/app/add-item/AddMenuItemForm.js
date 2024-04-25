@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+
 import './AddMenuItem.css';
 
 
-function AddMenuItemForm() {
+function AddMenuItemForm({onAddMenuItem}) {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
@@ -24,14 +25,15 @@ function AddMenuItemForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const menuData = {
-      name: name,
-      price: price,
-      description: description,
-      tag: tag,
-    }
+    const newMenuItem = {
+      id: Date.now(),// Generate unique ID, adjust as needed
+      name,
+      price,
+      description,
+      tag
+    };
 
-    console.log(menuData);
+    onAddMenuItem(newMenuItem);
 
     setName('');
     setPrice('');
