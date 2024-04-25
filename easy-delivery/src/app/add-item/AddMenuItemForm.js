@@ -46,8 +46,6 @@ function AddMenuItemForm({onAddMenuItem}) {
       // Optionally, you can handle error behavior here (e.g., show an error message)
     }
 
-    //onAddMenuItem(newMenuItem);
-
     setName('');
     setPrice('');
     setDescription('');
