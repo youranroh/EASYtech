@@ -5,24 +5,36 @@ import './AddMenuItem.css';
 function AddMenuItemForm() {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
-  const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
   const [tag, setTag] = useState(''); //This sets the tag for the carousel
+
+  const nameChangeHander = (event) => {
+    setName(event.target.value);
+  }
+  const priceChangeHandler = (event) => {
+    setPrice(event.target.value);
+  }
+  const descriptionChangeHandler = (event) => {
+    setDescription(event.target.value);
+  }
+  const tagChangeHandler = (event) => {
+    setTag(event.target.value);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log({
-      name,
-      price,
-      category,
-      description,
-      tag
-    });
+    const menuData = {
+      name: name,
+      price: price,
+      description: description,
+      tag: tag,
+    }
+
+    console.log(menuData);
 
     setName('');
     setPrice('');
-    setCategory('');
     setDescription('');
     setTag('');
   };
@@ -41,7 +53,7 @@ function AddMenuItemForm() {
           type="text"
           id="name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={nameChangeHander}
           required
         />
       </div>
@@ -51,7 +63,7 @@ function AddMenuItemForm() {
           type="text"
           id="price"
           value={price}
-          onChange={(e) => setPrice(e.target.value)}
+          onChange={priceChangeHandler}
           required
         />
       </div>
@@ -60,7 +72,7 @@ function AddMenuItemForm() {
         <select
           id="tag"
           value={tag}
-          onChange={(e) => setTag(e.target.value)}
+          onChange={tagChangeHandler}
           required
         >
           <option value="">Select Category</option>
@@ -79,7 +91,7 @@ function AddMenuItemForm() {
         <textarea
           id="description"
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={descriptionChangeHandler}
           required
         />
       </div>
