@@ -1,63 +1,86 @@
-'use client'
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-import './LogIn.css';
+import React, { useState, useContext, useEffect } from 'react';
+import axios from 'axios';
+import UserContext from '../../../context/UserContext';
 import { useRouter } from 'next/navigation';
+import './LogIn.css';
+import Link from 'next/link';
 
-function LogIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [mode, setMode] = useState('login');
-  const router = new useRouter();
-  
+const LogIn = () => {
+    const router = useRouter();
+    const { userData, setUserData } = useContext(UserContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (mode === 'login') {
-      console.log('Sign Up or Log in')
-    }
-    router.push('/')
-  };
+    // Redirect if user is already logged in
+    useEffect(() => {
+        if (userData.token) {
+            router.push('/'); // redirect
+        }
+    }, [userData.token, router]);
 
-  return (
-    <div className="login-container form">
-      <div className="card">
-        <h1>Sign Up or Login</h1>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Email:</label>
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label>Password:</label>
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit">{mode === 'login' ? 'Login' : 'Sign Up'}</button>
-        </form>
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+    const [error, setError] = useState('');
 
-        <br></br>
-        <p className="small">
-          {mode === 'login' ? "Don't have an account? " : 'Have an Account?'}
-          <button onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
-            {mode === 'login' ? 'Sign up' : 'Login'}
-          </button>
-        </p>
-      </div>
-    </div>
-  );
-}
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            // Send login request to the server
+            const response = await axios.post('http://localhost:8082/api/users/login', formData);
+            setUserData({
+                token: response.data.token,
+                user: response.data.user
+            });
+            // Store the authenticationtoken in local storage
+            localStorage.setItem("auth-token", response.data.token);
+            router.push('/');
+        } catch (error) {
+            console.error('Login failed: ', error);
+            // Handle login error
+        }
+    };
+
+    return (
+        <div className="login-container form">
+        <div className="card">
+            <h1>Login or <Link href='/sign-up' className='signup'>Sign Up</Link></h1>
+            <form onSubmit={handleLogin}>
+            <div>
+                <label htmlFor='email'>Email:</label>
+                <input
+                type="email"
+                id='email'
+                name='email'
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                />
+            </div>
+            <div>
+                <label htmlFor='password'>Password:</label>
+                <input
+                type="password"
+                id='password'
+                name='password'
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                />
+            </div>
+            <button type="submit">Login</button>
+            </form>
+        </div>
+        </div>
+    );
+};
 
 export default LogIn;

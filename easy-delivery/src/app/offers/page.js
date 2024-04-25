@@ -2,6 +2,7 @@
 import './page.css';
 import Navigation from '../components/Navigation';
 import Offers from './Offers';
+import { UserProvider } from '../../../context/UserContext';
 import './Offers.css'
 
 
@@ -16,19 +17,21 @@ function Home() {
     ];
 
     return(
-    <div className='page'>
-        <Navigation />
-        <br></br>
-        <h1>Ongoing Offers</h1>
-            <div>
-                <div className="offer-cards">
-                    {offersData.map((offer) => (
-                    <Offers key={offer.id} offer={offer} />
-                    ))}
+        <UserProvider>
+            <div className='page'>
+                <Navigation />
+                <br></br>
+                <h1>Ongoing Offers</h1>
+                <div>
+                    <div className="offer-cards">
+                        {offersData.map((offer) => (
+                        <Offers key={offer.id} offer={offer} />
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
-  );
+        </UserProvider>
+    );
 };
 
 export default Home;

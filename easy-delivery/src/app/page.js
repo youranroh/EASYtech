@@ -1,14 +1,10 @@
 'use client';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState } from 'react';
-
 import Navigation from './components/Navigation';
-import AuthNavigation from './components/AuthNavigation';
 import Carousel from './components/Carousel';
-import AddMenuItemForm from './add-item/AddMenuItemForm';
 import MenuItemCard from './components/MenuItem';
-import PageNotFound from './components/PageNotFound';
+import { UserProvider } from '../../context/UserContext';
 import './page.css'
 
 function App() {
@@ -157,28 +153,24 @@ function App() {
 
   const [filteredItems, setFilteredItems] = useState(dummyMenuItems);
 
+  const [items, setItems] = useState('Menu Items:')
+
   const handleCategoryClick = (categoryName) => {
     const filtered = dummyMenuItems.filter(item => item.tag === categoryName);
     setFilteredItems(filtered);
+    setItems(categoryName + ':')
   };
 
   return (
+    <UserProvider>
     <div className='body'>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Navigation />} />
-          <Route exact path='/log-in' element={<AuthNavigation />} />
-          <Route exact path='/add-item' element={<AuthNavigation />} />
-          <Route exact path="/addMenuItemForm" element={<AddMenuItemForm />} />
-          <Route path="*" element={<PageNotFound />} />
-          </Routes>
-      </Router>
+      <Navigation />
       <br></br>
       <h2 className='welcome'>Welcome!</h2>
       <Carousel items={foodCategories} onCategoryClick={handleCategoryClick}/>
 
       <br></br>
-      <h2>Favorites:</h2>
+      <h2 className='welcome'>{items}</h2>
 
       <div className="restaurantList">
       {filteredItems.map((restaurant) => (
@@ -191,9 +183,8 @@ function App() {
           />
         ))}
       </div>
-      
-      
     </div>
+    </UserProvider>
   );
 }
 
