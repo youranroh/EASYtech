@@ -5,10 +5,8 @@ const port = process.env.PORT || 8082;
 const mongoose = require('mongoose');
 const cors =require('cors');
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
-
-app.use (cors({origin:true, credentials: true}));
-app.get('/', (req,res) => res.send('Hello World!'));
+app.use (cors({origin: true, credentials: true}));
+app.get('/', (req, res) => res.send('Hello World!'));
 app.use(express.json({extended:false})); //required line
 
 const conn_str = 'mongodb+srv://sahaj:helloworld@cluster0.4w3xybo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
