@@ -1,19 +1,21 @@
 const mongoose = require('mongoose');
 
 const ItemSchema = new mongoose.Schema({
-    title: {
+    name: {
         type:String,
         required: true,
     },
-    description: {
-        type: String,
-    },
-    image: {
+    price: {
         type:String,
     },
-    updated_date: {
-        type: Date,
-        default: Date.now,
+    imageSrc: {
+        type: String,
+    },
+    description: {
+        type:String,
+    },
+    tag: {
+        type: String,
     },
 });
 
