@@ -14,7 +14,7 @@ router.post('/', (req,res) => {
 });
 
 //get a specific item
-router.get('/:id', (req,res) => {
+router.get('/:id', (req,res) => {x
     Item.findById(req.params.id)
         .then((item) => res.json(item))
         .catch((err) => res.status(404).json({ noitemfound: "no item found" }));

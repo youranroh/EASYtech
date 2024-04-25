@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 import './AddMenuItem.css';
 
 
@@ -8,6 +8,7 @@ function AddMenuItemForm({onAddMenuItem}) {
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [tag, setTag] = useState(''); //This sets the tag for the carousel
+  const [img, setImg] = useState('');
 
   const nameChangeHander = (event) => {
     setName(event.target.value);
@@ -21,30 +22,43 @@ function AddMenuItemForm({onAddMenuItem}) {
   const tagChangeHandler = (event) => {
     setTag(event.target.value);
   }
+  const imgChangeHandler = (event) => {
+    setImg(event.target.value);
+  }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     const newMenuItem = {
-      id: Date.now(),// Generate unique ID, adjust as needed
       name,
       price,
       description,
-      tag
+      tag,
+      img,
     };
 
-    onAddMenuItem(newMenuItem);
+    try {
+      const response = await axios.post('http://localhost:8082/api/items', newMenuItem);
+      console.log('Menu item added:', response.data);
+      // Optionally, you can handle success behavior here (e.g., show a success message)
+    } catch (error) {
+      console.error('Error adding menu item:', error.message);
+      // Optionally, you can handle error behavior here (e.g., show an error message)
+    }
+
+    //onAddMenuItem(newMenuItem);
 
     setName('');
     setPrice('');
     setDescription('');
     setTag('');
+    setImg('');
   };
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    console.log('Selected image:', file);
-  };
+  // const handleImageUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   console.log('Selected image:', file);
+  // };
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
@@ -100,10 +114,10 @@ function AddMenuItemForm({onAddMenuItem}) {
       <div>
         <label htmlFor="image">Image:</label>
         <input
-          type="file"
           id="image"
-          accept="image/*"
-          onChange={(e) => handleImageUpload(e)}
+          type="text"
+          value={img}
+          onChange={imgChangeHandler}
           required
         />
       </div>

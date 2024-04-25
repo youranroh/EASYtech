@@ -8,13 +8,13 @@ const ItemSchema = new mongoose.Schema({
     price: {
         type:String,
     },
-    imageSrc: {
-        type: String,
-    },
     description: {
         type:String,
     },
     tag: {
+        type: String,
+    },
+    img: {
         type: String,
     },
 });

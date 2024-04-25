@@ -4,7 +4,6 @@ import Navigation from './components/Navigation';
 import Carousel from './components/Carousel';
 import MenuItemCard from './components/MenuItem';
 import { UserProvider } from '../../context/UserContext';
-import Home from './add-item/page';
 import './page.css'
 
 function App() {
