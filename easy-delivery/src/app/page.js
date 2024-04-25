@@ -70,7 +70,7 @@ function App() {
       <Carousel items={foodCategories} onCategoryClick={handleCategoryClick}/>
 
       <br></br>
-      <h2 className='welcome'>Menu Items:</h2>
+      <h2 className='welcome'>{items}</h2>
       
       <div className="restaurantList">
       {filteredItems.map((restaurant) => (

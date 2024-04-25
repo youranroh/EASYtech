@@ -10,7 +10,7 @@ const PageNotFound = () => {
             <div className="page">
                 <Navigation />
                 <div className="content">
-                    <h1>404 Error: Page Not Found</h1>
+                    <h1>Error 404: Page Not Found</h1>
                 </div>
             </div>
         </UserProvider>

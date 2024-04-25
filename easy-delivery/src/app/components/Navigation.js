@@ -9,10 +9,8 @@ const Navigation = () => {
     const { userData, setUserData } = useContext(UserContext);
     const router = useRouter();
 
-    const handleLogout = () => {
-        setUserData({ token: undefined, user: undefined }); // Clear user data
-        localStorage.removeItem('auth-token'); // Clear the token from local storage
-        router.push('/');
+    const logout = () => {
+        router.push('/logout');
     };
 
     const login = () => {
@@ -42,7 +40,7 @@ const Navigation = () => {
                 </li>
                 <li>
                     {userData.token ? (
-                        <button onClick={handleLogout}>Logout</button>
+                        <button onClick={logout}>Logout</button>
                     ) : (
                         <button onClick={login}>Login</button>
                     )}
