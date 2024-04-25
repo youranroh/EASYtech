@@ -77,12 +77,12 @@ function AddMenuItemForm() {
         >
           <option value="">Select Category</option>
           <option value="Appetizer">Appetizer</option>
-          <option value="Main Course">Pasta</option>
-          <option value="Dessert">Pizza</option>
-          <option value="Dessert">Salad</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Salad">Salad</option>
           <option value="Dessert">Dessert</option>
-          <option value="Dessert">Beverages</option>
-          <option value="Dessert">Kids</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Kids">Kids</option>
           
         </select>
       </div>

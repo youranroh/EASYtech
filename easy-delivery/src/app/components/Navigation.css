@@ -3,11 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    height: 50px;
 }
 
 .navBar img {
     height: 40px;
+    margin: 5px;
+}
+
+.navBar img:hover {
+    transform: translateY(3px);
 }
 
 .navBar ul {
@@ -15,9 +20,19 @@
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 1rem;
 }
 
-.nav a {
-    color: inherit;
+li > button {
+    background-color: #547CE2;
+    color: white;
+    height: 50px;
+    width: fit-content;
+    padding: 10px;
+    font-size: medium;
+    border: 0px;
+ }
+
+li > button:hover {
+    background-color: #2552c3;
+    cursor: pointer;
 }

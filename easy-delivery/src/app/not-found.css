@@ -1,0 +1,12 @@
+.page {
+    min-height: 100vh;
+    background-color: #9FBAFF;
+}
+
+.content {
+    padding: 40vh;
+}
+
+h1 {
+    text-align: center;
+}

@@ -2,11 +2,6 @@
   background-color: #9FBAFF;
 }
 
-.container {
-  min-height: 100vh;
-  background-color: white;
-}
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -25,4 +20,5 @@
 .welcome {
   padding-top: 1em;
   font-size: x-large;
+  text-align: center;
 }
