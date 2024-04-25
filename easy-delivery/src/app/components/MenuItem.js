@@ -5,6 +5,7 @@ import Home from '../add-item/page';
 const MenuItemCard = ({ imageSrc, name, description, price }) => {
   return (
     <div className='restaurantCard'>
+      <div className='deleteButton'>x</div>
       <div className='imageContainer'>
         <img src={imageSrc} alt="Food Item" className='image' />
       </div>
