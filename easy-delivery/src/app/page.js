@@ -11,7 +11,7 @@ function App() {
   const [menuItems, setMenuItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const foodCategories = [
-    { name: 'All', image: '/all.bmp' },
+    { name: 'All', image: '/allfood.jpeg' },
     { name: 'Appetizers', image: '/apps.bmp' },
     { name: 'Pasta', image: '/pasta.bmp' },
     { name: 'Pizza', image: '/pizza.bmp' },
