@@ -79,12 +79,19 @@ function App() {
     fetchMenuItems();
   }, []);
 
-  const handleDeleteItem = (itemId) => {
-    const updatedMenuItems = menuItems.filter(item => item.id !== itemId);
-    const updatedFilteredItems = filteredItems.filter(item => item.id !== itemId);
-    setMenuItems(updatedMenuItems);
-    setFilteredItems(updatedFilteredItems);
+  const handleDeleteItem = async (itemId) => {
+    try {
+      await axios.delete(`http://localhost:8082/api/items/${itemId}`);
+      //update state (updating list on home page)
+      const updatedMenuItems = menuItems.filter(item => item._id !== itemId);
+      const updatedFilteredItems = filteredItems.filter(item => item._id !== itemId);
+      setMenuItems(updatedMenuItems);
+      setFilteredItems(updatedFilteredItems);
+    } catch (error) {
+      console.error('Error deleting item:', error.message);
+    }
   };
+  
 
   const handleCategoryClick = (categoryName) => {
     if (categoryName === 'All') {
