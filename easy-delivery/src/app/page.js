@@ -12,7 +12,7 @@ function App() {
   const [menuItems, setMenuItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const foodCategories = [
-    { name: 'All', image: '/allfood.jpeg' },
+    { name: 'All', image: '/allfood.webp' },
     { name: 'Appetizers', image: '/apps.bmp' },
     { name: 'Pasta', image: '/pasta.bmp' },
     { name: 'Pizza', image: '/pizza.bmp' },
