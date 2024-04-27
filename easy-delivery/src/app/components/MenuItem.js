@@ -1,10 +1,19 @@
 import React from 'react';
 import DeleteItem from '../delete-item/DeleteItem';
+import { useRouter } from 'next/navigation';
+
 import '../css/MenuItem.css';
 
 const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) => {
+  const router = useRouter();
+
+  const edit = () => {
+    let route = "/edit-item/" + itemId;
+    router.push(route)
+  }
+
   return (
-    <div className='restaurantCard'>
+    <div className='restaurantCard' onClick={edit}>
       <DeleteItem itemId={itemId} onDelete={onDelete} />
       <div className='imageContainer'>
         <img src={imageSrc} alt="Food Item" className='image' />

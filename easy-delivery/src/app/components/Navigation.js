@@ -6,7 +6,7 @@ import Link from 'next/link';
 import "../css/Navigation.css";
 
 const Navigation = () => {
-    const { userData, setUserData } = useContext(UserContext);
+    const { userData } = useContext(UserContext);
     const router = useRouter();
 
     const logout = () => {

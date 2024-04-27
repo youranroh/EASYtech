@@ -13,6 +13,7 @@ const LogIn = () => {
     useEffect(() => {
         if (userData.token) {
             router.push('/'); // redirect
+            console.log(userData.token);
         }
     }, [userData.token, router]);
 

@@ -13,7 +13,7 @@ const DeleteItem = ({ itemId, onDelete }) => {
 
   return (
     <div className='deleteButton' onClick={handleDelete}>
-      x
+      ✖
     </div>
   );
 }

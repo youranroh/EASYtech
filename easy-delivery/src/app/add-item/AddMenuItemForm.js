@@ -92,7 +92,7 @@ function AddMenuItemForm({onAddMenuItem}) {
               required
             >
               <option value="">Select Category</option>
-              <option value="Appetizer">Appetizer</option>
+              <option value="Appetizers">Appetizers</option>
               <option value="Pasta">Pasta</option>
               <option value="Pizza">Pizza</option>
               <option value="Salad">Salad</option>

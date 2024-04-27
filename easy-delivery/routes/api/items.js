@@ -1,3 +1,4 @@
+const auth = require('../../middleware/auth');
 const express = require('express');
 const router = express.Router();
 var bodyParser = require("body-parser");
@@ -14,7 +15,7 @@ router.post('/', (req,res) => {
 });
 
 //get a specific item
-router.get('/:id', (req,res) => {x
+router.get('/:id', (req,res) => {
     Item.findById(req.params.id)
         .then((item) => res.json(item))
         .catch((err) => res.status(404).json({ noitemfound: "no item found" }));

@@ -41,7 +41,6 @@ form textarea {
   padding: 10px;
   background-color: white;
   color: #000000;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: medium;
@@ -73,4 +72,13 @@ form textarea {
 .error {
   margin-bottom: 15px;
   color: #FF898E;
+}
+
+.optionTwo {
+  margin-top: 5px;
+  border: #cc0000 2px solid !important;
+}
+
+.optionTwo:hover {
+  background-color: #cc0000 !important;
 }

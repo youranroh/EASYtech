@@ -1,8 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import axios from 'axios';
 import UserContext from '../../../context/UserContext';
-import Link from 'next/link';
 import '../css/card.css';
 
 const LogIn = () => {
@@ -26,8 +24,7 @@ const LogIn = () => {
             <img src='/leaf.png' alt='Sad to See You Leaf' />
             <div className='options'>
                 <button onClick={goBack}>Return</button>
-                <h1></h1>
-                <button onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout} className='optionTwo'>Logout</button>
             </div>
         </div>
         </div>
