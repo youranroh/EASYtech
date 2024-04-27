@@ -1,11 +1,11 @@
 import React from 'react';
 import './MenuItem.css';
-import Home from '../add-item/page';
+import DeleteItem from '../delete-item/DeleteItem'; 
 
-const MenuItemCard = ({ imageSrc, name, description, price }) => {
+const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) => {
   return (
     <div className='restaurantCard'>
-      <div className='deleteButton'>x</div>
+      <DeleteItem itemId={itemId} onDelete={onDelete} />
       <div className='imageContainer'>
         <img src={imageSrc} alt="Food Item" className='image' />
       </div>

@@ -73,12 +73,18 @@ function App() {
         setFilteredItems([...dummyMenuItems, ...fetchedMenuItems]);
       } catch (error) {
         console.error('Error fetching menu items:', error.message);
-        // Optionally, you can handle error behavior here (e.g., show an error message)
       }
     };
 
     fetchMenuItems();
   }, []);
+
+  const handleDeleteItem = (itemId) => {
+    const updatedMenuItems = menuItems.filter(item => item.id !== itemId);
+    const updatedFilteredItems = filteredItems.filter(item => item.id !== itemId);
+    setMenuItems(updatedMenuItems);
+    setFilteredItems(updatedFilteredItems);
+  };
 
   const handleCategoryClick = (categoryName) => {
     if (categoryName === 'All') {
@@ -101,15 +107,20 @@ function App() {
       <h2 className='welcome'></h2>
       
       <div className="restaurantList">
-      {filteredItems.map((restaurant) => (
-          <MenuItemCard
-            key={restaurant.id}
-            imageSrc={restaurant.img}
-            name={restaurant.name}
-            description={restaurant.description}
-            price={restaurant.price}
-          />
-        ))}
+        {filteredItems.map((restaurant) => {
+          console.log(restaurant._id); // Move the console.log inside the curly braces
+          return (
+            <MenuItemCard
+              key={restaurant._id}
+              itemId={restaurant._id}
+              imageSrc={restaurant.img}
+              name={restaurant.name}
+              description={restaurant.description}
+              price={restaurant.price}
+              onDelete={handleDeleteItem}
+            />
+          );
+        })}
       </div>
       {/* Render the Home component and pass onAddMenuItem function */}
       {/* <Home onAddMenuItem={handleAddMenuItem} /> */}

@@ -47,7 +47,7 @@ function updateItemInfo( {params}) {
         axios
         .put('http://localhost:3000/api/items/${id}', data)
         .then((res) => {
-            router.push('/show-item/${id}', data)
+            router.push('/', data)
         })
         .catch((err) => {
             console.log('Error in UpdateItemInfo.');
