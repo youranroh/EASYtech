@@ -108,7 +108,7 @@ function App() {
       
       <div className="restaurantList">
         {filteredItems.map((restaurant) => {
-          console.log(restaurant._id); // Move the console.log inside the curly braces
+          console.log(restaurant._id); 
           return (
             <MenuItemCard
               key={restaurant._id}
