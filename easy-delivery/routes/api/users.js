@@ -10,21 +10,21 @@ userRouter.post("/signup", async (req, res) => {
     try {
         const { email, password, confirmPassword, username } = req.body;
         if (!email || !password || !username || !confirmPassword) {
-            return res.status(400).json({ msg: "Please enter all the fields" });
-        }
-        if (password.length < 6) {
-            return res
-                .status(400)
-                .json({ msg: "Password should be atleast 6 characters" });
-        }
-        if (confirmPassword !== password) {
-            return res.status(400).json({ msg: "Both the passwords don't match" });
+            return res.status(400).json({ msg: "⚠️ Please enter all the fields" });
         }
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res
                 .status(400)
-                .json({ msg: "User with the same email already exists" });
+                .json({ msg: "⚠️ User with the same email already exists" });
+        }
+        if (confirmPassword !== password) {
+            return res.status(400).json({ msg: "⚠️ Both the passwords don't match" });
+        }
+        if (password.length < 6) {
+            return res
+                .status(400)
+                .json({ msg: "⚠️ Password should be at least 6 characters" });
         }
         const hashedPassword = await bcryptjs.hash(password, 8);
         const newUser = new User({ email, password: hashedPassword, username });
@@ -42,20 +42,20 @@ userRouter.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body;
         if ( !email || !password) {
-            return res.status(400).json({ msg: "Please enter all the fields" });
+            return res.status(400).json({ msg: "⚠️ Please enter all the fields" });
         }
 
         const user = await User.findOne({ email });
         if (!user) {
             return res
                 .status(400)
-                .send({ msg: "User with this email does not exist" });
+                .send({ msg: "⚠️ User with this email does not exist" });
         }
 
         const isMatch = await bcryptjs.compare(password, user.password);
 
         if (!isMatch) {
-            return res.status(400).send({ msg: "Incorrect password." });
+            return res.status(400).send({ msg: "⚠️ Incorrect password" });
         }
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
         res.json({ token, user: { id: user._id, username: user.username } });

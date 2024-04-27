@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Carousel.css';
+import '../css/Carousel.css';
 
 const Carousel = ({ items, onCategoryClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

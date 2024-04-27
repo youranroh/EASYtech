@@ -2,14 +2,16 @@
 import { UserProvider } from '../../../context/UserContext';
 import AddMenuItemForm from './AddMenuItemForm';
 import Navigation from '../components/Navigation';
-import './page.css';
+import '../css/form.css';
 
 function Home({ onAddMenuItem }) {
   return (
     <UserProvider>
       <div className='page'>
         <Navigation />
-        <AddMenuItemForm onAddMenuItem={onAddMenuItem} />
+        <div className='content'>
+          <AddMenuItemForm onAddMenuItem={onAddMenuItem} />
+        </div>
       </div>
     </UserProvider>
   );

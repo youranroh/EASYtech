@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import UserContext from '../../../context/UserContext';
 import Link from 'next/link';
-import "./Navigation.css";
+import "../css/Navigation.css";
 
 const Navigation = () => {
     const { userData, setUserData } = useContext(UserContext);

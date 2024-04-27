@@ -1,6 +1,6 @@
 import React from 'react';
-import './MenuItem.css';
-import DeleteItem from '../delete-item/DeleteItem'; 
+import DeleteItem from '../delete-item/DeleteItem';
+import '../css/MenuItem.css';
 
 const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) => {
   return (

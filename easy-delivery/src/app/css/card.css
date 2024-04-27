@@ -1,65 +1,76 @@
-.login-container {
+.container {
   display: flex;
-  justify-content: center;
   align-items: center;
   border: #000000;
+  flex-direction: column;
 }
 
+
 .card {
-  width: 350px; 
-  height: 400px;
-  padding: 20px;
+  width: 24vw; 
+  height: fit-content;
+  padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  justify-content: center;
   background-color: #547ce2;
-  margin-top: 10vh;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card h1{
   color:white;
-}
-
-.form h1 {
-  margin-bottom: 15px;
   text-align: center;
-  color:white;
+  margin-bottom: 15px;
 }
 
-.form input[type="email"],
-.form input[type="password"] {
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form select,
+form textarea {
   color: black;
   background-color: white;
   width: 100%;
-  margin-bottom: 10px;
   padding: 8px;
   box-sizing: border-box;
   border: #2552c3 2px solid;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-.form button {
+.card button {
   width: 100%;
   padding: 10px;
-  margin-top: 10px;
   background-color: white;
   color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: medium;
+  border: #2552c3 2px solid;
 }
 
-.form button:hover {
+.card button:hover {
   background-color: #2552c3;
   color: white;
 }
 
-.signup{
+.switch{
   text-decoration: underline;
 }
 
-.signup:hover {
+.switch:hover {
   color: #2552c3;
+}
+
+.card img {
+  max-height: 30vh;
+  border: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.error {
+  margin-bottom: 15px;
+  color: #FF898E;
 }

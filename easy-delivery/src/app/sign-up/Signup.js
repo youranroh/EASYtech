@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import UserContext from '../../../context/UserContext';
 import Link from 'next/link';
-import './SignUp.css'
+import '../css/card.css'
 
 const Signup = () => {
     const router = useRouter();
@@ -24,6 +24,9 @@ const Signup = () => {
             [e.target.name]: e.target.value
         });
     };
+
+    const [error, setError] = useState('');
+    const [errBox, setErrBox] = useState('null')
 
     // Function to handle form submission
     const handleSubmit = async (e) => {
@@ -46,14 +49,16 @@ const Signup = () => {
             router.push('/');
         } catch (error) {
             console.error('Signup failed: ', error);
+            setError(error.response.data.msg);
+            setErrBox('error');
             // Handle signup error
         }
     };
 
     return (
-        <div className="login-container form">
+        <div className="container">
             <div className="card">
-                <h1>Sign Up or <Link href='/log-in' className='login'>Login</Link></h1>
+                <h1>Sign Up or <Link href='/log-in' className='switch'>Login</Link></h1>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor='email'>Email:</label>
@@ -76,7 +81,6 @@ const Signup = () => {
                         placeholder="Username"
                         value={formData.username}
                         onChange={handleChange}
-                        required
                         />
                     </div>
                     <div>
@@ -88,7 +92,6 @@ const Signup = () => {
                         placeholder="Password"
                         value={formData.password}
                         onChange={handleChange}
-                        required
                         />
                     </div>
                     <div>
@@ -100,10 +103,10 @@ const Signup = () => {
                         placeholder="Confirm Password"
                         value={formData.confirmPassword}
                         onChange={handleChange}
-                        required
                         />
                     </div>
-                <button type="submit">Sign Up</button>
+                    <div className={errBox}>{error}</div>
+                    <button type="submit">Sign Up</button>
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import UserContext from '../../../context/UserContext';
 import Link from 'next/link';
-import './LogIn.css';
+import '../css/card.css';
 
 const LogIn = () => {
     const router = useRouter();
@@ -21,6 +21,7 @@ const LogIn = () => {
         password: ''
     });
     const [error, setError] = useState('');
+    const [errBox, setErrBox] = useState('null')
 
     const handleChange = (e) => {
         setFormData({
@@ -43,42 +44,44 @@ const LogIn = () => {
             router.push('/');
         } catch (error) {
             console.error('Login failed: ', error);
+            setError(error.response.data.msg);
+            setErrBox('error');
             // Handle login error
         }
     };
 
     return (
-        <div className="login-container form">
-        <div className="card">
-            <h1>Login or <Link href='/sign-up' className='signup'>Sign Up</Link></h1>
-            <form onSubmit={handleLogin}>
-            <div>
-                <label htmlFor='email'>Email:</label>
-                <input
-                type="email"
-                id='email'
-                name='email'
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                />
+        <div className="container">
+            <div className="card">
+                <h1>Login or <Link href='/sign-up' className='switch'>Sign Up</Link></h1>
+                <form onSubmit={handleLogin}>
+                    <div>
+                        <label htmlFor='email'>Email:</label>
+                        <input
+                        type="email"
+                        id='email'
+                        name='email'
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor='password'>Password:</label>
+                        <input
+                        type="password"
+                        id='password'
+                        name='password'
+                        placeholder="Password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        />
+                    </div>
+                    <div className={errBox}>{error}</div>
+                    <button type="submit">Login</button>
+                </form>
             </div>
-            <div>
-                <label htmlFor='password'>Password:</label>
-                <input
-                type="password"
-                id='password'
-                name='password'
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                />
-            </div>
-            <button type="submit">Login</button>
-            </form>
-        </div>
         </div>
     );
 };

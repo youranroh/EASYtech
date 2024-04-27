@@ -2,7 +2,7 @@
 import { UserProvider } from '../../../context/UserContext'
 import Navigation from '../components/Navigation';
 import Logout from './Logout';
-import './page.css';
+import '../css/form.css';
 
 function Home() {
   return (

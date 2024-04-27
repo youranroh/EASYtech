@@ -2,7 +2,7 @@
 import React from "react";
 import Navigation from "./components/Navigation";
 import { UserProvider } from "../../context/UserContext";
-import './not-found.css'
+import './css/not-found.css'
  
 const PageNotFound = () => {
     return (

@@ -2,7 +2,7 @@
 import { UserProvider } from '../../../context/UserContext';
 import Navigation from '../components/Navigation';
 import Offers from './Offers';
-import './page.css';
+import '../css/form.css';
 
 function Home() {
     const offersData = [

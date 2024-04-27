@@ -2,7 +2,7 @@
 import { UserProvider } from '../../../context/UserContext'
 import Navigation from '../components/Navigation';
 import Signup from './Signup';
-import './page.css';
+import '../css/form.css';
 
 
 function Home() {
