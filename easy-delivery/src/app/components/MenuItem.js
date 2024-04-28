@@ -13,7 +13,7 @@ const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) 
   }
 
   return (
-    <div className='restaurantCard' onClick={edit}>
+    <div className='restaurantCard'>
       <DeleteItem itemId={itemId} onDelete={onDelete} />
       <div className='imageContainer'>
         <img src={imageSrc} alt="Food Item" className='image' />
@@ -25,6 +25,7 @@ const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) 
         </div>
         <div className='description'>{description} </div>
       </div>
+      <button onClick={edit} className='editButton'>Edit Item</button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import UserContext from '../../../../context/UserContext';
+import DeleteItem from '@/app/delete-item/DeleteItem';
 import axios from 'axios';
 import '../../css/card.css';
 

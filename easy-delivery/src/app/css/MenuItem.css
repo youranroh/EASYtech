@@ -87,3 +87,21 @@
   color: white;
 }
 
+.editButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1; /* Ensure the button is above the description */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  background-color: #45a049;
+}
+
