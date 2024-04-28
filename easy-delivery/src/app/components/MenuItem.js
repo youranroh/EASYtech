@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DeleteItem from '../delete-item/DeleteItem';
 import { useRouter } from 'next/navigation';
-
+import UserContext from '../../../context/UserContext';
 import '../css/MenuItem.css';
 
 const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) => {
   const router = useRouter();
+  const { userData } = useContext(UserContext);
 
   const edit = () => {
     let route = "/item/" + itemId;
@@ -14,7 +15,9 @@ const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) 
 
   return (
     <div className='restaurantCard'>
-      <DeleteItem itemId={itemId} onDelete={onDelete} />
+      {userData.token ? (
+        <DeleteItem itemId={itemId} onDelete={onDelete} />
+      ) : null}
       <div className='imageContainer' onClick={edit}>
         <img src={imageSrc} alt="Food Item" className='image' />
       </div>

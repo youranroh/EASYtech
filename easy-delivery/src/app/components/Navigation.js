@@ -33,7 +33,6 @@ const Navigation = () => {
                     {userData.token ? (
                         <button onClick={addItem}>Add Item</button>
                     ) : null}
-                    
                 </li>
                 <li>
                     <button onClick={offers}>Offers</button>
