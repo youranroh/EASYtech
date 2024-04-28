@@ -13,12 +13,12 @@ const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) 
   }
 
   return (
-    <div className='restaurantCard' onClick={edit}>
+    <div className='restaurantCard'>
       <DeleteItem itemId={itemId} onDelete={onDelete} />
-      <div className='imageContainer'>
+      <div className='imageContainer' onClick={edit}>
         <img src={imageSrc} alt="Food Item" className='image' />
       </div>
-      <div className='cardContent'>
+      <div className='cardContent' onClick={edit}>
         <div className='header'>
           <div className='name'>{name}</div>
           <div className='price'>${price}</div>

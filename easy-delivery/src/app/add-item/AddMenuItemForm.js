@@ -42,10 +42,9 @@ function AddMenuItemForm({onAddMenuItem}) {
     try {
       const response = await axios.post('http://localhost:8082/api/items', newMenuItem);
       console.log('Menu item added:', response.data);
-      // Optionally, you can handle success behavior here (e.g., show a success message)
+      window.alert('Item added successfully!');
     } catch (error) {
       console.error('Error adding menu item:', error.message);
-      // Optionally, you can handle error behavior here (e.g., show an error message)
     }
 
     setName('');

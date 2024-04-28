@@ -10,14 +10,7 @@ function EditItemForm() {
   const router = useRouter();
   const itemId = window.location.pathname.split('/')[2];
   const { userData } = useContext(UserContext);
-
-  useEffect(() => {
-    if (null) {
-      router.push('/'); // redirect
-      console.log(userData.token);
-    }
-  }, [userData.token, router]);
-
+  const [loading, setLoading] = useState(true);
   const [item, setItem] = useState({
     name: '',
     price: '',
@@ -25,10 +18,8 @@ function EditItemForm() {
     tag: '',
     img: ''
   })
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch item data from MongoDB using itemId
     axios.get(`http://localhost:8082/api/items/${itemId}`)
         .then(response => {
             setItem(response.data);
@@ -55,7 +46,7 @@ function EditItemForm() {
     try {
       await axios.put(`http://localhost:8082/api/items/${itemId}`, item);
       console.log('Item updated successfully');
-      router.push('/'); // Redirect to homepage after successful update
+      router.push('/');
     } catch (error) {
       console.error('Error updating item:', error.message);
     }
@@ -65,7 +56,7 @@ function EditItemForm() {
     try {
       await axios.delete(`http://localhost:8082/api/items/${itemId}`);
       console.log('Item deleted successfully');
-      router.push('/'); // Redirect to homepage after successful deletion
+      router.push('/');
     } catch (error) {
       console.error('Error deleting item:', error.message);
     }
