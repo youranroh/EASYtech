@@ -8,7 +8,7 @@ const MenuItemCard = ({ itemId, imageSrc, name, description, price, onDelete }) 
   const router = useRouter();
 
   const edit = () => {
-    let route = "/edit-item/" + itemId;
+    let route = "/item/" + itemId;
     router.push(route)
   }
 

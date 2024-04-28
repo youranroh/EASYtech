@@ -104,29 +104,27 @@ function App() {
 
   return (
     <UserProvider>
-    <div className='body'>
-      <Navigation />
-      <br></br>
-      <h2 className='welcome'>Welcome!</h2>
-      <Carousel items={foodCategories} onCategoryClick={handleCategoryClick}/>
-      <div className="itemList">
-        {filteredItems.map((item) => {
-          return (
-            <MenuItem
-              key={item._id}
-              itemId={item._id}
-              imageSrc={item.img}
-              name={item.name}
-              description={item.description}
-              price={item.price}
-              onDelete={handleDeleteItem}
-            />
-          );
-        })}
+      <div className='body'>
+        <Navigation />
+        <br></br>
+        <h1 className='welcome'>Welcome!</h1>
+        <Carousel items={foodCategories} onCategoryClick={handleCategoryClick}/>
+        <div className="itemList">
+          {filteredItems.map((item) => {
+            return (
+              <MenuItem
+                key={item._id}
+                itemId={item._id}
+                imageSrc={item.img}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                onDelete={handleDeleteItem}
+              />
+            );
+          })}
+        </div>
       </div>
-      {/* Render the Home component and pass onAddMenuItem function */}
-      {/* <Home onAddMenuItem={handleAddMenuItem} /> */}
-    </div>
     </UserProvider>
   );
 }

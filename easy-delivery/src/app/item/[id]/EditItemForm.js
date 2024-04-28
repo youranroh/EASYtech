@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import UserContext from '../../../../context/UserContext';
+import MenuItem from '../../components/MenuItem'
 import axios from 'axios';
 import '../../css/card.css';
 
@@ -147,7 +148,13 @@ function EditItemForm() {
         <button onClick={handleDelete} className='optionTwo'>Delete Item</button>
       </div>
       ) : ( 
-        <h1>You must be logged in to do that</h1>
+        <MenuItem
+          itemId={item._id}
+          imageSrc={item.img}
+          name={item.name}
+          description={item.description}
+          price={item.price}
+        />
       )}
     </div>
   );
