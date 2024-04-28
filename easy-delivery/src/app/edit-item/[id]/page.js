@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { UserProvider } from '../../../../context/UserContext';
 import Navigation from '../../components/Navigation';
 import EditItemForm from './EditItemForm';

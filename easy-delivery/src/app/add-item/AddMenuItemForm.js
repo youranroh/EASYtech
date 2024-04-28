@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import UserContext from '../../../context/UserContext';
 import axios from 'axios';
 import '../css/card.css';
 
 
 function AddMenuItemForm({onAddMenuItem}) {
+  const { userData } = useContext(UserContext);
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
@@ -60,6 +62,7 @@ function AddMenuItemForm({onAddMenuItem}) {
 
   return (
     <div className='container'>
+      {userData.token ? (
       <div className='card'>
         <h1>Add Item</h1>
         <form onSubmit={handleSubmit}>
@@ -120,9 +123,12 @@ function AddMenuItemForm({onAddMenuItem}) {
               required
             />
           </div>
-          <button type="submit">Add Menu Item</button>
+          <button type="submit">Add Item</button>
         </form>
       </div>
+      ) : (
+        <h1>You must be logged in to do that</h1>
+      )}
     </div>
   );
 }
