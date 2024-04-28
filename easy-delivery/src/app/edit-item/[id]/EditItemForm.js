@@ -64,7 +64,10 @@ function EditItemForm() {
     try {
       await axios.delete(`http://localhost:8082/api/items/${itemId}`);
       console.log('Item deleted successfully');
-      router.push('/'); // Redirect to homepage after successful deletion
+      const updatedMenuItems = menuItems.filter(item => item._id !== itemId);
+      const updatedFilteredItems = filteredItems.filter(item => item._id !== itemId);
+      setMenuItems(updatedMenuItems);
+      setFilteredItems(updatedFilteredItems);
     } catch (error) {
       console.error('Error deleting item:', error.message);
     }
