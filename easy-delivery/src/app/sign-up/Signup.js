@@ -45,7 +45,6 @@ const Signup = () => {
                 user: loginRes.data.user
             });
             localStorage.setItem("auth-token", loginRes.data.token);
-            // Optionally, you can redirect the user to another page upon successful signup
             router.push('/');
         } catch (error) {
             console.error('Signup failed: ', error);

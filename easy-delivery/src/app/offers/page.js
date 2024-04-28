@@ -11,7 +11,11 @@ function Home() {
           title: 'Newly Open Discount',
           description: 'Get 20% off on your first visit!',
         },
-        // Add more offer data here if needed
+        {
+            id: 2,
+            title: 'New Rewards Members',
+            description: 'Get 10% off when you sign up for rewards!'
+        },
     ];
 
     return(

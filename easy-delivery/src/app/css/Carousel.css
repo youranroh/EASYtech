@@ -18,8 +18,8 @@
 
 .slide {
   display: inline-block; /* Display slides in a row */
-  width: calc(20% - 20px); /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed */
+  width: calc(20% - 20px); 
+  height: 200px; 
   background-size: cover;
   position: relative;
   margin-right: 20px; /* Add margin to create space between slides */

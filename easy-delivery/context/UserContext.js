@@ -16,8 +16,6 @@ export const UserProvider = ({ children }) => {
                 ...prev,
                 token: token
             }));
-            // Optionally, you might want to verify the token with your backend here
-            // and load the user data if the token is still valid
         }
     }, []);
 
