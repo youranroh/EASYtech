@@ -55,7 +55,7 @@ function EditItemForm() {
     try {
       await axios.put(`http://localhost:8082/api/items/${itemId}`, item);
       console.log('Item updated successfully');
-      router.push('/'); // Redirect to homepage after successful update
+      router.push('/');
     } catch (error) {
       console.error('Error updating item:', error.message);
     }
