@@ -77,10 +77,5 @@ userRouter.post("/tokenIsValid", async (req, res) => {
     }
 });
 
-userRouter.get('/', (req,res) => {
-    User.find()
-        .then((user) => res.json(user))
-        .catch((err) => res.status(404).json({ nouserfound: "no user found" }));
-});
 
 module.exports = userRouter;
