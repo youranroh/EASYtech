@@ -3,12 +3,11 @@ const express = require('express');
 const router = express.Router();
 var bodyParser = require("body-parser");
 
-
 //load the model
 const Item = require('../../models/Item');
 
 //add a new item
-router.post('/', (req,res) => {
+router.post('/', auth, (req,res) => {
     Item.create(req.body)
         .then((item) => res.json({msg: 'Item added successfully'}))
         .catch((err) => res.status(400).json({error:'unable to add this item'}));
@@ -30,7 +29,7 @@ router.get('/', (req,res) => {
 
 // @route GET api/items/:id
 //update a specific item
-router.put ('/:id', (req,res) => {
+router.put ('/:id', auth, (req,res) => {
     Item.findByIdAndUpdate(req.params.id, req.body)
         .then((item) => res.json({ msg: 'Updated successfully'}))
         .catch((err) =>
@@ -38,11 +37,11 @@ router.put ('/:id', (req,res) => {
 });
 
 //delete a specific item
-router.delete('/:id', (req,res) => {
+router.delete('/:id', auth, (req,res) => {
     Item.findByIdAndDelete(req.params.id)
         .then((item) => res.json({mgs: 'Item Entry Deleted Successfully'}))
         .catch((err) => res.status(404).json({ error: 'No such item' }));
 });
 
 
-module.exports=router;
+module.exports = router;

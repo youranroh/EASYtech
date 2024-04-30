@@ -12,6 +12,8 @@ function AddMenuItemForm({onAddMenuItem}) {
   const [tag, setTag] = useState(''); //This sets the tag for the carousel
   const [img, setImg] = useState('');
 
+  axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`;
+
   const nameChangeHander = (event) => {
     setName(event.target.value);
   }

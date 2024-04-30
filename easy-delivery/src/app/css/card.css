@@ -70,8 +70,12 @@ form textarea {
 }
 
 .error {
+  background-color: #cc0000;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
   margin-bottom: 15px;
-  color: #FF898E;
+  border: #880000 2px solid
 }
 
 .optionTwo {

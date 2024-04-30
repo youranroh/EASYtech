@@ -18,6 +18,7 @@ function EditItemForm() {
     tag: '',
     img: ''
   })
+  axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`;
 
   useEffect(() => {
     axios.get(`http://localhost:8082/api/items/${itemId}`)

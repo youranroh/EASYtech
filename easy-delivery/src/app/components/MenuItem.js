@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import DeleteItem from '../delete-item/DeleteItem';
+import DeleteItem from './DeleteItem';
 import { useRouter } from 'next/navigation';
 import UserContext from '../../../context/UserContext';
 import '../css/MenuItem.css';
